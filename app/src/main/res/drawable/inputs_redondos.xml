@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ripple android:color="@color/blue_light"
+<ripple android:color="@color/secondyLight"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/input_redondo">
         <shape android:shape="rectangle">
-            <solid android:color="@color/colorLight"/>
+            <solid android:color="@color/blueLight"/>
             <corners android:radius="170dp" />
         </shape>
     </item>
