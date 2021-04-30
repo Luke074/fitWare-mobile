@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">FitWare</string>
+
+    <!-- Login / Register   -->
     <string name="enter">Entrar</string>
     <string name="email">Email</string>
     <string name="password">Senha</string>
     <string name="login">Login</string>
+
+    <!-- Navigation Bottom   -->
+    <string name="perfil">Perfil</string>
+    <string name="home">Home</string>
 </resources>
