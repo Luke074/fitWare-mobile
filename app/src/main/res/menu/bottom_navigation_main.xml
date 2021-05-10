@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item android:id="@+id/home"
         android:title="@string/home"
         android:icon="@drawable/home_24"
         />
-
     <item android:id="@+id/perfil_pessoal"
         android:title="Agendamento"
         android:icon="@drawable/person_24"/>
-
     <item android:id="@+id/perfil_2"
         android:title="Academias"
         android:icon="@drawable/person_24"/>
-
     <item android:id="@+id/perfil_3"
         android:title="Historico"
         android:icon="@drawable/person_24"/>
-
     <item android:id="@+id/perfil_4"
         android:title="@string/perfil"
         android:icon="@drawable/person_24"/>
-
 </menu>
