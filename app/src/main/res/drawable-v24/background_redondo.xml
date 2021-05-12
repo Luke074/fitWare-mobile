@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/container_redondo">
         <shape android:shape="rectangle">
-            <solid android:color="@color/secondy" />
+            <solid android:color="@color/blueLight" />
             <corners android:topLeftRadius="0dp" android:bottomLeftRadius="550dp"
                 />
         </shape>

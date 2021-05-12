@@ -6,19 +6,15 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/light"
-    android:orientation="vertical">
+    tools:context=".gui.MainActivity">
 
-    <include android:id="@+id/include_top"
-        layout="@layout/toolbar"
-        android:layout_alignParentTop="true"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"/>
+    <include layout="@layout/toolbar"/>
 
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/include_top"
+        android:layout_below="@id/toolbar"
         android:layout_above="@id/bottom_navigation_bottom"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
