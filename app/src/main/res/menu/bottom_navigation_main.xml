@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/menu_home"
         android:title="@string/home"
-        android:icon="@drawable/profile"
+        android:icon="@drawable/home_uncolor"
         />
     <item android:id="@+id/perfil_pessoal"
         android:title="Agendamento"
-        android:icon="@drawable/profile"/>
+        android:icon="@drawable/clipboard_uncolor"/>
+    <item android:id="@+id/aula_online"
+        android:title="Aulas"
+        android:icon="@drawable/tv_uncolor"/>
     <item android:id="@+id/perfil_2"
         android:title="Academias"
-        android:icon="@drawable/profile"/>
-    <item android:id="@+id/perfil_3"
-        android:title="Historico"
-        android:icon="@drawable/clipboard"/>
+        android:icon="@drawable/peso_uncolor"/>
     <item android:id="@+id/menu_perfil"
         android:title="@string/perfil"
-        android:icon="@drawable/profile"/>
+        android:icon="@drawable/profile_uncolor"/>
 </menu>
