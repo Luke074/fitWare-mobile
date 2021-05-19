@@ -5,13 +5,13 @@
         android:icon="@drawable/home_uncolor"
         />
     <item android:id="@+id/perfil_pessoal"
-        android:title="Agendamento"
+        android:title="@string/scheduling"
         android:icon="@drawable/clipboard_uncolor"/>
     <item android:id="@+id/aula_online"
-        android:title="Aulas"
+        android:title="@string/aula"
         android:icon="@drawable/tv_uncolor"/>
     <item android:id="@+id/perfil_2"
-        android:title="Academias"
+        android:title="@string/academy"
         android:icon="@drawable/peso_uncolor"/>
     <item android:id="@+id/menu_perfil"
         android:title="@string/perfil"

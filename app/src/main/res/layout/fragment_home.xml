@@ -3,20 +3,108 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background_redondo">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
+        android:id="@+id/text_view_welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bem-vindo Ao FitWare"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"
+        android:text="@string/welcome"
+        style="@style/TextTittle"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_detailsuser_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/text_view_welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="20dp">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_rounded">
 
+            <ImageView
+                android:id="@+id/image_user_card"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/fitware_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/linear_layout_details"
+                android:layout_margin="20dp"/>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_details"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/image_user_card"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/text_nameuser_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name_user"
+                    style="@style/TextDetails" />
+
+                <TextView
+                    android:id="@+id/text_emailuser_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="email_user@gmail.com"
+                    style="@style/TextDetails" />
+
+                <TextView
+                    android:id="@+id/text_cpfuser_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="xxx.xxx.xxx-xx"
+                    style="@style/TextDetails" />
+
+                <TextView
+                    android:id="@+id/text_dateuser_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="12/09/2001"
+                    style="@style/TextDetails" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/text_view_title_academias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Academias Perto de Você"
+        style="@style/TextTittle"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/card_view_detailsuser_home"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_view_title_academias"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        tools:listitem="@layout/holder_academy_layout">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

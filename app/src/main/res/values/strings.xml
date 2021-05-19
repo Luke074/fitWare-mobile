@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">FitWare</string>
 
-    <!-- Login / Register   -->
+    <!-- Splash Activity -->
+    <string name="name_empresa">AddMeans</string>
+    <string name="name_app">FitWare</string>
+
+    <!-- Login / Register -->
     <string name="logo_icon">Logo_icon</string>
     <string name="title_login">Realize seu Login!</string>
     <string name="enter">Entrar</string>
@@ -10,7 +14,13 @@
     <string name="login">Login</string>
     <string name="register">Registre-se</string>
 
-    <!-- Navigation Bottom   -->
-    <string name="perfil">Perfil</string>
+    <!-- Navigation Bottom -->
+    <string name="perfil">Perfil</string>!
     <string name="home">Home</string>
+    <string name="academy">Academias</string>
+    <string name="aula">Aulas</string>
+    <string name="scheduling">Agendamento</string>
+
+    <!-- Home Activity -->
+    <string name="welcome">Bem-vindo Ao FitWare</string>
 </resources>

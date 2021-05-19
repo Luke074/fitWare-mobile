@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/card_rounded">
+
+        <ImageView
+            android:id="@+id/image_user_card"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/fitware_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/linear_layout_details"
+            android:layout_margin="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_details"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_user_card"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="7dp">
+
+            <TextView
+                android:id="@+id/text_nameuser_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name_user"
+                style="@style/TextDetails"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/text_emailuser_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="email_user@gmail.com"
+                style="@style/TextDetails"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/text_cpfuser_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="xxx.xxx.xxx-xx"
+                style="@style/TextDetails"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/text_dateuser_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12/09/2001"
+                style="@style/TextDetails"
+                android:gravity="center" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
