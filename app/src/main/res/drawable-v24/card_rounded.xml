@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/input_redondo">
         <shape android:shape="rectangle">
-            <solid android:color="@color/secondyLight"/>
+            <solid android:color="@color/light"/>
             <corners android:radius="20dp" />
         </shape>
     </item>

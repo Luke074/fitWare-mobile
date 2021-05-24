@@ -4,71 +4,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="15dp"
+    android:layout_margin="7dp"
     app:cardCornerRadius="20dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/card_rounded">
+        android:background="@drawable/card_rounded"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/image_user_card"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/fitware_icon"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/linear_layout_details"
-            android:layout_margin="20dp"/>
+            android:layout_margin="5dp"/>
 
         <LinearLayout
             android:id="@+id/linear_layout_details"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/image_user_card"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:padding="7dp">
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:id="@+id/text_nameuser_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Name_user"
-                style="@style/TextDetails"
-                android:gravity="center" />
+                android:text="Lucas Mendes"
+                style="@style/TextDetails" />
 
             <TextView
                 android:id="@+id/text_emailuser_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="email_user@gmail.com"
-                style="@style/TextDetails"
-                android:gravity="center" />
+                android:text="lucasmendes074@gmail.com"
+                style="@style/TextDetails" />
 
             <TextView
                 android:id="@+id/text_cpfuser_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="xxx.xxx.xxx-xx"
-                style="@style/TextDetails"
-                android:gravity="center" />
+                style="@style/TextDetails" />
 
             <TextView
                 android:id="@+id/text_dateuser_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="12/09/2001"
-                style="@style/TextDetails"
-                android:gravity="center" />
+                style="@style/TextDetails" />
 
         </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>
 
