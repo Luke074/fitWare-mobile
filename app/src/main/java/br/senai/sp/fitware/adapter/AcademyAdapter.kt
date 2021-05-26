@@ -27,7 +27,7 @@ class AcademyAdapter: RecyclerView.Adapter<AcademyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: AcademyViewHolder, position: Int) {
-
+        holder.bind(academyList[position])
     }
 
 }

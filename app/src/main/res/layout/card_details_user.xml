@@ -15,49 +15,60 @@
 
         <ImageView
             android:id="@+id/image_user_card"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:src="@drawable/fitware_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/linear_layout_details"
             android:layout_margin="5dp"/>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/linear_layout_details"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="10dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_user_card"
+            android:paddingBottom="20dp">
 
             <TextView
-                android:id="@+id/text_nameuser_card"
-                android:layout_width="match_parent"
+                android:id="@+id/text_firstname__card"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lucas Mendes"
+                android:text="Lucas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/text_secondyname_card"
+                app:layout_constraintBottom_toTopOf="@id/text_emailuser_card"
                 style="@style/TextDetails" />
+
+            <TextView
+                android:id="@+id/text_secondyname_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mendes"
+                style="@style/TextDetails"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/text_emailuser_card"
+                app:layout_constraintStart_toEndOf="@id/text_firstname__card"/>
 
             <TextView
                 android:id="@+id/text_emailuser_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="lucasmendes074@gmail.com"
-                style="@style/TextDetails" />
+                style="@style/TextDetails"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
-            <TextView
-                android:id="@+id/text_cpfuser_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="xxx.xxx.xxx-xx"
-                style="@style/TextDetails" />
-
-            <TextView
-                android:id="@+id/text_dateuser_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="12/09/2001"
-                style="@style/TextDetails" />
-
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
