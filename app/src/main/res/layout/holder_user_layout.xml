@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/secondyLight">
+
+    <include layout="@layout/card_details_user" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/card_rounded"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_peso_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="65.5"
+            style="@style/TextInfoUser"/>
+
+        <TextView
+            android:id="@+id/text_altura_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1.70"
+            style="@style/TextInfoUser"
+            android:layout_below="@id/text_peso_user"/>
+
+
+        <TextView
+            android:id="@+id/text_sexo_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="M / F / O"
+            style="@style/TextInfoUser"
+            android:layout_below="@id/text_altura_user"/>
+
+        <TextView
+            android:id="@+id/text_datanascimento_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="29-04-2002"
+            style="@style/TextInfoUser"
+            android:layout_below="@id/text_sexo_user"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/card_rounded"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_cidade_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="São Paulo"
+            style="@style/TextInfoUser"/>
+
+        <TextView
+            android:id="@+id/text_estado_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SP"
+            style="@style/TextInfoUser"
+            android:layout_below="@id/text_cidade_user"/>
+
+        <TextView
+            android:id="@+id/text_numero_endereco_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1300"
+            style="@style/TextInfoUser"
+            android:layout_below="@id/text_estado_user"/>
+
+        <TextView
+            android:id="@+id/text_endereco_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="bairro tal de nao sei aonde"
+            style="@style/TextInfoUser"
+            android:layout_below="@id/text_numero_endereco_user"/>
+
+        <TextView
+            android:id="@+id/text_cep_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="06364-570"
+            style="@style/TextInfoUser"
+            android:layout_below="@id/text_endereco_user"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

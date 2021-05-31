@@ -8,6 +8,5 @@ class Academy(
     var academyCep: String,
     var academyStreet: String,
     var academyCity: String,
-    var academyState: String,
     var academyImage: Drawable
 )

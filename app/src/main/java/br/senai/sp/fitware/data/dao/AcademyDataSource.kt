@@ -15,16 +15,14 @@ class AcademyDataSource {
                 "SmartFit",
                 "06364-570",
                 "Rua nova Independencia",
-                "Carapicuiba",
-                "SP", context.getDrawable(R.drawable.carapicuiba)!!)
+                "Carapicuiba", context.getDrawable(R.drawable.carapicuiba)!!)
             )
             academy.add(
                 Academy(2,
                     "Fitness Smart",
                     "06704-670",
                     "Rua aracuã",
-                    "Cotia",
-                    "AC", context.getDrawable(R.drawable.carapicuiba)!!)
+                    "Cotia", context.getDrawable(R.drawable.carapicuiba)!!)
             )
 
             return academy
