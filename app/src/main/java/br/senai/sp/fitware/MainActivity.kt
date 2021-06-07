@@ -6,8 +6,10 @@ import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import br.senai.sp.fitware.R
+import br.senai.sp.fitware.fragments.AulaOnlineFragment
 import br.senai.sp.fitware.fragments.HomeFragment
 import br.senai.sp.fitware.fragments.ProfileFragment
+import br.senai.sp.fitware.fragments.SchedulesFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener
 
@@ -15,6 +17,8 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
 
     private lateinit var homeFragment: HomeFragment
     private lateinit var profileFragment: ProfileFragment
+    private lateinit var schedulesFragment: SchedulesFragment
+    private lateinit var aulaOnlineFragment: AulaOnlineFragment
 
     private lateinit var bottomNavigation: BottomNavigationView
 
@@ -26,6 +30,8 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
 
         homeFragment = HomeFragment()
         profileFragment = ProfileFragment()
+        schedulesFragment = SchedulesFragment()
+        aulaOnlineFragment = AulaOnlineFragment()
 
         bottomNavigation = findViewById(R.id.bottom_navigation_bottom)
         bottomNavigation.setOnNavigationItemSelectedListener(this)
@@ -49,6 +55,14 @@ class MainActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
             R.id.menu_perfil -> {
                 setFragment(profileFragment)
                 toolbar.title = "Perfil"
+            }
+            R.id.menu_agendamento -> {
+                setFragment(schedulesFragment)
+                toolbar.title = "Agendamento"
+            }
+            R.id.menu_aulas_online -> {
+                setFragment(aulaOnlineFragment)
+                toolbar.title = "Aula Online"
             }
         }
 

@@ -4,10 +4,10 @@
         android:title="@string/home"
         android:icon="@drawable/home_uncolor"
         />
-    <item android:id="@+id/perfil_pessoal"
+    <item android:id="@+id/menu_agendamento"
         android:title="@string/scheduling"
         android:icon="@drawable/clipboard_uncolor"/>
-    <item android:id="@+id/aula_online"
+    <item android:id="@+id/menu_aulas_online"
         android:title="@string/aula"
         android:icon="@drawable/tv_uncolor"/>
     <item android:id="@+id/menu_perfil"

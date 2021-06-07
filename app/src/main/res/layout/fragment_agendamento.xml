@@ -13,25 +13,28 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp"
+        android:background="@drawable/inputs_redondos"/>
 
     <TextView
         android:id="@+id/textview_dias_marcados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dias Marcados"
-        android:layout_marginTop="10dp"
+        style="@style/TextTittle"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="20dp"
         android:layout_below="@id/button_add_date"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_agendamento"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/textview_dias_marcados"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="10dp"
-        tools:listitem="" />
+        android:layout_margin="10dp"
+        tools:listitem="@layout/holder_agendamento_layout" />
 
 </RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/secondy">
+
+    <item android:id="@+id/button_redondo">
+        <shape android:shape="oval">
+            <solid android:color="@color/secondy"/>
+        </shape>
+    </item>
+
+</ripple>

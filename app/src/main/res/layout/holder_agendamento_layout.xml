@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_rounded"
+    android:backgroundTint="@color/secondyLight"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/name_user_agendamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="nome user"
+        style="@style/TextDetails"/>
+
+    <TextView
+        android:id="@+id/date_user_agendamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="data user"
+        style="@style/TextDetails" />
+
+    <TextView
+        android:id="@+id/hour_user_agendamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="horario user"
+        style="@style/TextDetails" />
+
+</LinearLayout>
