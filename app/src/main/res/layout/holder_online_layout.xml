@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_rounded"
+    android:backgroundTint="@color/secondyLight"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/title_online"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="titulo da aula"
+        android:gravity="center"
+        android:textSize="28dp"
+        android:textColor="@color/dark"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/link_online"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="link da aula"
+        style="@style/TextDetails" />
+
+</LinearLayout>
