@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_home"
+        android:title="@string/home"
+        android:icon="@drawable/home_uncolor"
+        />
+    <item android:id="@+id/menu_agendamento"
+        android:title="@string/scheduling"
+        android:icon="@drawable/clipboard_uncolor"/>
+    <item android:id="@+id/menu_aulas_online"
+        android:title="@string/aula"
+        android:icon="@drawable/tv_uncolor"/>
+    <item android:id="@+id/menu_perfil"
+        android:title="@string/perfil"
+        android:icon="@drawable/profile_uncolor"/>
+</menu>
