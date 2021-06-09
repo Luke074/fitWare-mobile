@@ -10,12 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-<<<<<<< HEAD
-=======
+
         <activity android:name=".gui.HomeActivity" android:screenOrientation="portrait">
 
         </activity>
->>>>>>> e9d9e8a5237bce7d6f0f9d123aa9c4731cefa67a
         <activity android:name=".gui.MainActivity" android:screenOrientation="portrait">
 
         </activity>

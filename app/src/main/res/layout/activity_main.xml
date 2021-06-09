@@ -5,11 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
     tools:context=".gui.MainActivity"
-=======
-    tools:context=".gui.HomeActivity"
->>>>>>> e9d9e8a5237bce7d6f0f9d123aa9c4731cefa67a
     android:background="@color/blueLight"
     android:orientation="vertical">
 

@@ -6,11 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/light"
-<<<<<<< HEAD
     tools:context=".gui.MainActivity">
-=======
-    tools:context=".gui.HomeActivity">
->>>>>>> e9d9e8a5237bce7d6f0f9d123aa9c4731cefa67a
 
     <include layout="@layout/toolbar"/>
 
