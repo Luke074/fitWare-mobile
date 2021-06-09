@@ -11,6 +11,9 @@
         android:theme="@style/AppTheme"
         >
 
+        <activity android:name=".gui.RegisterActivity" android:screenOrientation="portrait">
+
+        </activity>
         <activity android:name=".gui.HomeActivity" android:screenOrientation="portrait">
 
         </activity>

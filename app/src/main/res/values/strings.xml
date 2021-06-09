@@ -9,10 +9,19 @@
     <string name="logo_icon">Logo_icon</string>
     <string name="title_login">Realize seu Login!</string>
     <string name="enter">Entrar</string>
-    <string name="email">Email</string>
-    <string name="password">Senha</string>
     <string name="login">Login</string>
     <string name="register">Registre-se</string>
+
+    <string name="dados_pesoais">Dados Pesoais</string>
+    <string name="fist_name">Primeiro nome</string>
+    <string name="secondy_name">Segundo nome</string>
+    <string name="sexo_m">M</string>
+    <string name="sexo_f">F</string>
+    <string name="data_nascimento">Data de Nascimento (Ano-mes-dia)</string>
+
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="next">Proximo</string>
 
     <!-- Navigation Bottom -->
     <string name="perfil">Perfil</string>!
