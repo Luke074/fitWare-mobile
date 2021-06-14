@@ -14,23 +14,24 @@ class AulaDataSource {
 
             aulaOnline.add(
                 AulaOnline(1,
-                "Aula de Agachamento",
-                "ajsbdasdsabdkjakjdbaskjdbjkasbdkjsabd")
+                "Jeferson",
+                "13H as 14H",
+                "30 pessoas",
+                "afsbasjfjasjbasfasasjbjfaa")
             )
             aulaOnline.add(
                 AulaOnline(2,
-                    "Aula de Zumba",
-                    "ajsbdasdsabdkjakjdbaskjdbjkasbdkjsabd")
+                    "Ednaldo Pereira",
+                    "13H as 14H",
+                    "40 pessoas",
+                    "afsbasjfjasjbasfasasjbjfaa")
             )
             aulaOnline.add(
                 AulaOnline(3,
-                    "Aula de Lutas",
-                    "ajsbdasdsabdkjakjdbaskjdbjkasbdkjsabd")
-            )
-            aulaOnline.add(
-                AulaOnline(4,
-                    "Aula de Não sei",
-                    "ajsbdasdsabdkjakjdbaskjdbjkasbdkjsabd")
+                    "Jotaro",
+                    "13H as 14H",
+                    "15 pessoas",
+                    "standartZauwaaaaardoooo")
             )
 
             return aulaOnline

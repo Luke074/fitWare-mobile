@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -7,23 +7,84 @@
     android:backgroundTint="@color/secondyLight"
     android:orientation="vertical"
     android:padding="10dp"
-    android:layout_margin="5dp">
+    android:layout_margin="7dp">
 
     <TextView
-        android:id="@+id/title_online"
+        android:id="@+id/personal_name_online"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="titulo da aula"
         android:gravity="center"
-        android:textSize="28dp"
+        android:textSize="28sp"
         android:textColor="@color/dark"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/title_duracao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duração da aula"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_below="@id/personal_name_online"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/text_view_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13Hrs as 14Hrs"
+        android:gravity="center"
+        android:layout_below="@id/title_duracao"
+        android:layout_alignParentStart="true"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/title_limite_pessoas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limite de Pessoas"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_below="@id/personal_name_online"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/text_view_limit_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30 pessoas"
+        android:gravity="center"
+        android:layout_below="@id/title_limite_pessoas"
+        android:layout_alignParentEnd="true"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"/>
+
 
     <TextView
         android:id="@+id/link_online"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="link da aula"
-        style="@style/TextDetails" />
+        android:gravity="center"
+        android:textSize="22sp"
+        android:textColor="@color/dark"
+        android:textStyle="bold"
+        android:layout_below="@id/text_view_limit_person"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
 
-</LinearLayout>
+</RelativeLayout>

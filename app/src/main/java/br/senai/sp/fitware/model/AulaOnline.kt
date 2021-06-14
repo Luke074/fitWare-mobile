@@ -1,7 +1,14 @@
 package br.senai.sp.fitware.model
 
-class AulaOnline(
+import com.google.gson.annotations.SerializedName
+import java.time.Duration
+
+data class AulaOnline(
     var id: Long,
-    var title: String,
+    @SerializedName("personal_name")
+    var namePersonal: String,
+    var duration: String,
+    @SerializedName("limit_person")
+    var limitPerson: String,
     var link: String
 )
