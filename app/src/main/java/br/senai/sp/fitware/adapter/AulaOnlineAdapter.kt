@@ -1,16 +1,14 @@
 package br.senai.sp.fitware.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import br.senai.sp.fitware.R
-import br.senai.sp.fitware.fragments.AulaOnlineFragment
 import br.senai.sp.fitware.holder.AulaOnlineViewHolder
 import br.senai.sp.fitware.model.AulaOnline
-import br.senai.sp.fitware.model.Schedules
 
-class AulaOnlineAdapter: RecyclerView.Adapter<AulaOnlineViewHolder>() {
+class AulaOnlineAdapter(val context: FragmentActivity?): RecyclerView.Adapter<AulaOnlineViewHolder>() {
     var aulaOnlineList = listOf<AulaOnline>()
 
     fun updateAulaOnline(list: List<AulaOnline>){

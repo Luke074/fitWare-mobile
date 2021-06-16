@@ -25,7 +25,7 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
         recyclerAcademy = view.findViewById(R.id.recycler_academys)
-        recyclerAcademy.layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, false)
+        recyclerAcademy.layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, false)
         recyclerAcademy.adapter = academyAdapter
 
         academyList = AcademyDataSource.getAcademy(view.context)

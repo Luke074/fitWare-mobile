@@ -8,7 +8,7 @@ import br.senai.sp.fitware.R
 import br.senai.sp.fitware.model.User
 
 class UserViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-    val imageUser = itemView.findViewById<ImageView>(R.id.image_user)
+//    val imageUser = itemView.findViewById<ImageView>(R.id.image_user)
     val textFirstNameUser = itemView.findViewById<TextView>(R.id.text_firstname_user)
     val textSecondyNameUser = itemView.findViewById<TextView>(R.id.text_secondyname_user)
     val textEmailUser = itemView.findViewById<TextView>(R.id.text_email_user)
@@ -24,7 +24,7 @@ class UserViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     val textCepUser = itemView.findViewById<TextView>(R.id.text_cep_user)
 
     fun bind(user: User){
-        imageUser.setImageDrawable(user.userImage)
+//        imageUser.setImageDrawable(user.userImage)
         textFirstNameUser.text = user.userFirstName
         textSecondyNameUser.text = user.userSecondyName
         textEmailUser.text = user.userEmail

@@ -13,7 +13,7 @@ class UserDataSource {
 
             user.add(
                 User(1,
-                    context.getDrawable(R.drawable.user)!!,
+//                    context.getDrawable(R.drawable.user)!!,
                     "Lucas",
                     "Mendes",
                     "mendeslucas277@gmail.com",
@@ -29,7 +29,6 @@ class UserDataSource {
                     "06364-570"
                 )
             )
-
             return user
         }
     }

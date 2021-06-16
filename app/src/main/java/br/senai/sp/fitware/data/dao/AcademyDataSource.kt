@@ -24,6 +24,27 @@ class AcademyDataSource {
                     "Rua aracuã",
                     "Cotia", context.getDrawable(R.drawable.carapicuiba)!!)
             )
+            academy.add(
+                Academy(3,
+                    "Fitness Smart",
+                    "06704-670",
+                    "Rua aracuã",
+                    "Cotia", context.getDrawable(R.drawable.carapicuiba)!!)
+            )
+            academy.add(
+                Academy(3,
+                    "Fitness Smart",
+                    "06704-670",
+                    "Rua aracuã",
+                    "Cotia", context.getDrawable(R.drawable.carapicuiba)!!)
+            )
+            academy.add(
+                Academy(5,
+                    "Fitness Smart",
+                    "06704-670",
+                    "Rua aracuã",
+                    "Cotia", context.getDrawable(R.drawable.carapicuiba)!!)
+            )
 
             return academy
         }

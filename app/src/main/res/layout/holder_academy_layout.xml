@@ -2,16 +2,18 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="300dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="15dp"
-    app:cardCornerRadius="15dp"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp"
+    android:layout_marginBottom="7dp"
+    app:cardCornerRadius="20dp"
     app:cardBackgroundColor="@color/secondy">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="7dp">
+        android:padding="4dp">
 
         <TextView
             android:id="@+id/textview_name_academy"
@@ -30,7 +32,6 @@
             android:layout_height="110dp"
             android:src="@drawable/fitware_icon"
             android:scaleType="centerCrop"
-            android:layout_marginTop="5dp"
             app:layout_constraintTop_toBottomOf="@id/textview_name_academy"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

@@ -4,7 +4,7 @@ import android.graphics.drawable.Drawable
 
 class User(
     var id: Long,
-    var userImage: Drawable,
+//    var userImage: Drawable,
     var userFirstName: String,
     var userSecondyName: String,
     var userEmail: String,
