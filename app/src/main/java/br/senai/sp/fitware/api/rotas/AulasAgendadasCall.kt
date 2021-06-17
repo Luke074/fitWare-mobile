@@ -1,4 +1,4 @@
-package br.senai.sp.fitware.api
+package br.senai.sp.fitware.api.rotas
 
 import br.senai.sp.fitware.model.AulaOnline
 import retrofit2.Call

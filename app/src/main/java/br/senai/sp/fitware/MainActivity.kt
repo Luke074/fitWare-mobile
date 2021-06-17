@@ -1,24 +1,23 @@
 package br.senai.sp.fitware.gui
 
 import android.content.Intent
-import android.hardware.biometrics.BiometricPrompt
-import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Message
+import android.util.Log
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.annotation.RequiresApi
 import br.senai.sp.fitware.R
+import br.senai.sp.fitware.api.rotas.LoginCall
 import br.senai.sp.fitware.api.RetrofitApi
 import br.senai.sp.fitware.model.UserLoginModel
 import com.google.android.material.textfield.TextInputEditText
-import okhttp3.internal.notify
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
-class MainActivity : AppCompatActivity(), View.OnClickListener{
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var textRegister: TextView
 
@@ -41,15 +40,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
     }
 
     override fun onClick(v: View?) {
-        when(v!!.id) {
+        when (v!!.id) {
             R.id.button_entrar -> {
-                if(editTextEmail.text.toString() == "" || editTextPassword.text.toString() == ""){
+                if (editTextEmail.text.toString() == "" || editTextPassword.text.toString() == "") {
                     notifyUser("Por favor preencha os campos para efetuar o Login!")
-                }else{
+                } else {
                     SingIn()
                 }
-//                val intentHomeActivity = Intent(this, HomeActivity::class.java)
-//                startActivity(intentHomeActivity)
             }
             R.id.text_view_registrese -> {
                 val intentRegisterActivity = Intent(this, RegisterActivity::class.java)
@@ -58,19 +55,49 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
         }
     }
 
-    private fun SingIn() {
+    fun SingIn() {
         val user = UserLoginModel(
             email = editTextEmail.text.toString(),
             password = editTextPassword.text.toString()
         )
 
         val retrofit = RetrofitApi.getRetrofit()
+        val loginCall = retrofit.create(LoginCall::class.java)
 
-//        val call = retrofit.
+        val call = loginCall.singIn(user)
 
+        call.enqueue(object : Callback<UserLoginModel> {
+            override fun onResponse(
+                call: Call<UserLoginModel>,
+                response: Response<UserLoginModel>
+            ) {
+                val responseBody = response.body()
+
+                if(responseBody.toString() == "201" ||
+                    responseBody.toString() == "200"){
+
+                    goHome()
+                }else{
+                    Toast.makeText(this@MainActivity,
+                        "email ou senha incorreto", Toast.LENGTH_LONG)
+                        .show()
+                }
+            }
+
+            override fun onFailure(call: Call<UserLoginModel>, t: Throwable) {
+                Toast.makeText(this@MainActivity, "A conexão falhou :(", Toast.LENGTH_LONG).show()
+                Log.e("ERRO_CONEXÃO", t.message.toString())
+            }
+
+        })
     }
 
-    private fun notifyUser(message: String){
+    private fun goHome() {
+        val intentHomeActivity = Intent(this, HomeActivity::class.java)
+        startActivity(intentHomeActivity)
+    }
+
+    private fun notifyUser(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }

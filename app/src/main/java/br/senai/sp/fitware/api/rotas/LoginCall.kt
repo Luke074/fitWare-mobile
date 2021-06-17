@@ -1,11 +1,12 @@
-package br.senai.sp.fitware.api
+package br.senai.sp.fitware.api.rotas
 
 import br.senai.sp.fitware.model.UserLoginModel
 import retrofit2.Call
+import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface LoginCall {
 
     @POST("sessions")
-    fun getSession() : Call<List<UserLoginModel>>
+    fun singIn(@Body user: UserLoginModel): Call<UserLoginModel>
 }

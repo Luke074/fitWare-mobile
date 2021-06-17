@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.senai.sp.fitware.R
 import br.senai.sp.fitware.adapter.AulaOnlineAdapter
-import br.senai.sp.fitware.api.AulasAgendadasCall
+import br.senai.sp.fitware.api.rotas.AulasAgendadasCall
 import br.senai.sp.fitware.api.RetrofitApi
 import br.senai.sp.fitware.model.AulaOnline
 import kotlinx.android.synthetic.main.fragment_online.*
