@@ -73,14 +73,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             ) {
                 val responseBody = response.body()
 
-                if(responseBody.toString() == "201" ||
-                    responseBody.toString() == "200"){
+                if(response.code().toString() == "201" ||
+                    response.code().toString() == "200"){
 
                     goHome()
                 }else{
                     Toast.makeText(this@MainActivity,
                         "email ou senha incorreto", Toast.LENGTH_LONG)
                         .show()
+                    Log.e("TESTE", responseBody.toString())
                 }
             }
 
