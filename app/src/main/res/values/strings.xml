@@ -17,10 +17,17 @@
     <string name="secondy_name">Segundo nome</string>
     <string name="sexo_m">M</string>
     <string name="sexo_f">F</string>
-    <string name="data_nascimento">Data de Nascimento (Ano-mes-dia)</string>
-
+    <string name="data_nascimento">Data de Nascimento (Ex: Ano-mes-dia)</string>
     <string name="email">Email</string>
     <string name="password">Senha</string>
+
+    <string name="cpf">CPF</string>
+    <string name="weight">Peso (Ex: 65.5)</string>
+    <string name="height">Altura (Ex: 1.75)</string>
+    <string name="city">Cidade (Ex: São Paulo)</string>
+    <string name="state">Estado (Ex: SP)</string>
+    <string name="street">Endereço</string>
+    <string name="cep">CEP (Ex: xxxxx-xxx)</string>
     <string name="next">Proximo</string>
 
     <!-- Navigation Bottom -->

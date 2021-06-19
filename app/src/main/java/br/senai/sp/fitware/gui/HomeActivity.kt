@@ -72,7 +72,7 @@ class HomeActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
         return true
     }
 
-    fun setFragment(fragment: Fragment) {
+    private fun setFragment(fragment: Fragment) {
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.frame_layout, fragment)

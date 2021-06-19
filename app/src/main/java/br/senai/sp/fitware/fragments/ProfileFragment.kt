@@ -7,14 +7,19 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.senai.sp.fitware.R
 import br.senai.sp.fitware.adapter.UserAdapter
-import br.senai.sp.fitware.data.dao.UserDataSource
+import br.senai.sp.fitware.api.RetrofitApi
+import br.senai.sp.fitware.api.rotas.UserCall
 import br.senai.sp.fitware.model.User
+import kotlinx.android.synthetic.main.fragment_perfil.*
+import okhttp3.Callback
+import retrofit2.Call
+import retrofit2.Response
 
 class ProfileFragment : Fragment() {
 
     private lateinit var recyclerUser: RecyclerView
-    private val userAdapter = UserAdapter()
-    private var userList = listOf<User>()
+    private var userAdapter = UserAdapter(activity)
+//    private var userList = listOf<User>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,17 +31,44 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         setHasOptionsMenu(true)
-        val view = inflater.inflate(R.layout.fragment_perfil, container, false)
 
-        recyclerUser = view.findViewById(R.id.recycler_user_infos)
-        recyclerUser.layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, false)
+//        userList = UserDataSource.getUser(view.context)
+//        userAdapter.updateUser(userList)
+
+        return inflater.inflate(R.layout.fragment_perfil, container, false)
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        recyclerUser = recycler_user_infos
+        userAdapter = UserAdapter(activity)
+        recyclerUser.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+
         recyclerUser.adapter = userAdapter
 
-        userList = UserDataSource.getUser(view.context)
+        setUserProfile()
+    }
 
-        userAdapter.updateUser(userList)
+    private fun setUserProfile() {
+        var userProfile: User
 
-        return view
+        val retrofit = RetrofitApi.getRetrofit()
+        val userCall = retrofit.create(UserCall::class.java)
+
+        val call = userCall.getUser()
+
+//        call.enqueue(object : Callback<List<User>> {
+//            override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
+//                TODO("Not yet implemented")
+//            }
+//
+//            override fun onFailure(call: Call<List<User>>, t: Throwable) {
+//                TODO("Not yet implemented")
+//            }
+//
+//        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

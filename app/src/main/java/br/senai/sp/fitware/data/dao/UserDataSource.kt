@@ -20,11 +20,9 @@ class UserDataSource {
                     "388.126.838-35",
                     "65.5",
                     "1.72",
-                    "Masculino",
                     "2003-03-19",
                     "Carapicuiba",
                     "São Paulo",
-                    "1300",
                     "Rua nova independencia",
                     "06364-570"
                 )

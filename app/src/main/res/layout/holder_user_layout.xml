@@ -87,20 +87,12 @@
             android:layout_below="@id/text_peso_user"/>
 
         <TextView
-            android:id="@+id/text_sexo_user"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="M / F / O"
-            style="@style/TextInfoUser"
-            android:layout_below="@id/text_altura_user"/>
-
-        <TextView
             android:id="@+id/text_datanascimento_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="29-04-2002"
             style="@style/TextInfoUser"
-            android:layout_below="@id/text_sexo_user"/>
+            android:layout_below="@id/text_altura_user"/>
 
     </RelativeLayout>
 
@@ -127,20 +119,12 @@
             android:layout_below="@id/text_cidade_user"/>
 
         <TextView
-            android:id="@+id/text_numero_endereco_user"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="1300"
-            style="@style/TextInfoUser"
-            android:layout_below="@id/text_estado_user"/>
-
-        <TextView
             android:id="@+id/text_endereco_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="bairro tal de nao sei aonde"
             style="@style/TextInfoUser"
-            android:layout_below="@id/text_numero_endereco_user"/>
+            android:layout_below="@id/text_estado_user"/>
 
         <TextView
             android:id="@+id/text_cep_user"

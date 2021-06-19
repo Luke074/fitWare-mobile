@@ -2,15 +2,16 @@ package br.senai.sp.fitware.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import br.senai.sp.fitware.R
 import br.senai.sp.fitware.holder.UserViewHolder
 import br.senai.sp.fitware.model.User
 
-class UserAdapter: RecyclerView.Adapter<UserViewHolder>() {
+class UserAdapter(val context: FragmentActivity?): RecyclerView.Adapter<UserViewHolder>() {
     private var userList = listOf<User>()
 
-    fun updateUser(list: List<User>){
+    fun updateUser(list: List<User>) {
         userList = list
         notifyDataSetChanged()
     }

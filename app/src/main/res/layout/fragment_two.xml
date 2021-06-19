@@ -15,7 +15,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:hint="@string/fist_name"/>
+        android:hint="@string/cpf"/>
 
     <EditText
         android:id="@+id/register_weight"
@@ -28,7 +28,7 @@
         android:layout_below="@id/register_cpf"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:hint="@string/secondy_name"/>
+        android:hint="@string/weight"/>
 
     <EditText
         android:id="@+id/register_height"
@@ -42,7 +42,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:inputType="date"
-        android:hint="@string/data_nascimento" />
+        android:hint="@string/height" />
 
     <EditText
         android:id="@+id/register_city"
@@ -55,7 +55,7 @@
         android:layout_below="@id/register_height"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:hint="@string/email" />
+        android:hint="@string/city" />
 
     <EditText
         android:id="@+id/register_state"
@@ -69,10 +69,38 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:inputType="textPassword"
-        android:hint="@string/password" />
+        android:hint="@string/state" />
+
+    <EditText
+        android:id="@+id/register_street"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:drawablePadding="10dp"
+        android:layout_below="@id/register_state"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:inputType="textPassword"
+        android:hint="@string/street" />
+
+    <EditText
+        android:id="@+id/register_cep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:drawablePadding="10dp"
+        android:layout_below="@id/register_street"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:inputType="textPassword"
+        android:hint="@string/cep" />
 
     <Button
-        android:id="@+id/button_next_two"
+        android:id="@+id/button_next_tree"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/inputs_redondos"

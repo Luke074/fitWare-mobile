@@ -33,12 +33,11 @@ class AulaOnlineFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         setHasOptionsMenu(true)
-        val view = inflater.inflate(R.layout.fragment_online, container, false)
 
 //        aulaOnlineList = AulaDataSource.getAulaOnline(view.context)
 //        aulaOnlineAdapter.updateAulaOnline(aulaOnlineList)
 
-        return view
+        return inflater.inflate(R.layout.fragment_online, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
