@@ -52,10 +52,10 @@ class HomeActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
                 setFragment(homeFragment)
                 toolbar.title = "Home"
             }
-            R.id.menu_perfil -> {
-                setFragment(profileFragment)
-                toolbar.title = "Perfil"
-            }
+//            R.id.menu_perfil -> {
+//                setFragment(profileFragment)
+//                toolbar.title = "Perfil"
+//            }
             R.id.menu_agendamento -> {
                 setFragment(schedulesFragment)
                 toolbar.title = "Agendamento"

@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/register_cpf"
+        android:id="@+id/register_fistname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -18,54 +18,54 @@
         android:hint="@string/fist_name"/>
 
     <EditText
-        android:id="@+id/register_weight"
+        android:id="@+id/register_secondyname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="15dp"
         android:drawablePadding="10dp"
-        android:layout_below="@id/register_cpf"
+        android:layout_below="@id/register_fistname"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:hint="@string/secondy_name"/>
 
     <EditText
-        android:id="@+id/register_height"
+        android:id="@+id/register_datanascimento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="15dp"
         android:drawablePadding="10dp"
-        android:layout_below="@id/register_weight"
+        android:layout_below="@id/register_secondyname"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:inputType="date"
         android:hint="@string/data_nascimento" />
 
     <EditText
-        android:id="@+id/register_city"
+        android:id="@+id/register_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="15dp"
         android:drawablePadding="10dp"
-        android:layout_below="@id/register_height"
+        android:layout_below="@id/register_datanascimento"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:hint="@string/email" />
 
     <EditText
-        android:id="@+id/register_state"
+        android:id="@+id/register_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="15dp"
         android:drawablePadding="10dp"
-        android:layout_below="@id/register_city"
+        android:layout_below="@id/register_email"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:inputType="textPassword"

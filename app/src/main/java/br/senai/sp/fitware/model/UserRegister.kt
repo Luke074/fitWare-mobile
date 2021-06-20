@@ -3,7 +3,6 @@ package br.senai.sp.fitware.model
 import com.google.gson.annotations.SerializedName
 
 data class UserRegister(
-    var id: Long,
     @SerializedName("first_name")
     var userFirstName: String,
     @SerializedName("surname")
