@@ -20,7 +20,7 @@
         android:id="@+id/text_view_title_academias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Academias Perto de Você"
+        android:text="@string/academy"
         style="@style/TextTittle"
         android:layout_marginStart="20dp"
         android:layout_below="@id/text_view_welcome"

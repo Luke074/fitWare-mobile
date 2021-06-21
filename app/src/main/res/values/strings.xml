@@ -42,11 +42,13 @@
     <!-- Navigation Bottom -->
     <string name="perfil">Perfil</string>!
     <string name="home">Home</string>
-    <string name="academy">Academias</string>
     <string name="aula">Aulas</string>
     <string name="scheduling">Agendamento</string>
 
     <!-- Home Activity -->
     <string name="welcome">Bem-vindo Ao FitWare</string>
+    <string name="academy">Academias</string>
+    <!--  Agendamento Activity  -->
+    <string name="days">Dias Marcados</string>
 
 </resources>

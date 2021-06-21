@@ -20,7 +20,7 @@
         android:id="@+id/textview_dias_marcados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dias Marcados"
+        android:text="@string/days"
         style="@style/TextTittle"
         android:layout_marginTop="5dp"
         android:layout_marginStart="20dp"
