@@ -3,29 +3,18 @@ package br.senai.sp.fitware.gui
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import br.senai.sp.fitware.R
 import br.senai.sp.fitware.api.RetrofitApi
 import br.senai.sp.fitware.api.rotas.RegisterCall
-import br.senai.sp.fitware.fragments.EtapaOne
-import br.senai.sp.fitware.fragments.EtapaTwo
 import br.senai.sp.fitware.model.UserRegister
-import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.create
 
-class RegisterActivity : AppCompatActivity(), View.OnClickListener {
-
-    private lateinit var etapaOne: EtapaOne
-    private lateinit var etapaTwo: EtapaTwo
+class RegisterActivity : AppCompatActivity(), View.OnClickListener , AdapterView.OnItemSelectedListener{
 
     private lateinit var editTextFirstName: EditText
     private lateinit var editTextSecondyName: EditText
@@ -39,16 +28,18 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var editTextState: EditText
     private lateinit var editTextStreet: EditText
     private lateinit var editTextCep: EditText
+    private lateinit var editTextNumber: EditText
+    private lateinit var editTextCell: EditText
 
-    private lateinit var buttonNextTwo: Button
+    private lateinit var spinnerSexo: Spinner
+    private lateinit var msgSpinner: TextView
+    private val sexoList = listOf<String>("M", "F", "O")
+
     private lateinit var buttonRegisterConfirm: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-
-        etapaOne = EtapaOne()
-        etapaTwo = EtapaTwo()
 
         editTextFirstName = findViewById(R.id.register_fistname)
         editTextSecondyName = findViewById(R.id.register_secondyname)
@@ -62,31 +53,30 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         editTextState = findViewById(R.id.register_state)
         editTextStreet = findViewById(R.id.register_street)
         editTextCep = findViewById(R.id.register_cep)
+        editTextNumber = findViewById(R.id.register_number)
+        editTextCell = findViewById(R.id.register_cell)
 
-        buttonNextTwo = findViewById(R.id.button_next_two)
-        buttonNextTwo.setOnClickListener(this)
         buttonRegisterConfirm = findViewById(R.id.button_register_end)
         buttonRegisterConfirm.setOnClickListener(this)
 
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.frame_layout_register, etapaOne)
-            .commit()
+        msgSpinner = findViewById(R.id.msg_spinner)
+        spinnerSexo = findViewById(R.id.spinner)
+        spinnerSexo.onItemSelectedListener
+
+        val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, sexoList)
+        spinnerSexo.adapter = arrayAdapter
     }
 
+    override fun onNothingSelected(parent: AdapterView<*>?) {
+        TODO("Not yet implemented")
+    }
 
-    private fun setFragment(fragment: Fragment) {
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.frame_layout, fragment)
-            .commit()
+    override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        msgSpinner.text = "Selected : "+ sexoList[position]
     }
 
     override fun onClick(v: View?) {
         when(v!!.id){
-            R.id.button_next_two -> {
-                setFragment(etapaTwo)
-            }
             R.id.button_register_end -> {
                 Register()
             }
@@ -97,16 +87,18 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         val register = UserRegister(
             userFirstName = editTextFirstName.text.toString(),
             userSecondyName = editTextSecondyName.text.toString(),
-            userDateNascimento = editTextEmail.text.toString(),
+            userDateNascimento = editTextDataNascimento.text.toString(),
             userEmail = editTextEmail.text.toString(),
-            userPassword = editTextEmail.text.toString(),
+            userPassword = editTextPassword.text.toString(),
             userCpf = editTextCpf.text.toString(),
-            userPeso = editTextPeso.text.toString(),
-            userAltura = editTextAltura.text.toString(),
+            userPeso = editTextPeso.text.toString().toDouble(),
+            userAltura = editTextAltura.text.toString().toDouble(),
             userCity = editTextCity.text.toString(),
             userState = editTextState.text.toString(),
             userAdress = editTextStreet.text.toString(),
-            userCep = editTextCep.text.toString()
+            userCep = editTextCep.text.toString(),
+            userCelular = editTextCell.text.toString(),
+            userNumber = editTextNumber.text.toString()
         )
 
         val retrofit = RetrofitApi.getRetrofit()
@@ -142,4 +134,5 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         val intentHomeActivity = Intent(this, MainActivity::class.java)
         startActivity(intentHomeActivity)
     }
+
 }

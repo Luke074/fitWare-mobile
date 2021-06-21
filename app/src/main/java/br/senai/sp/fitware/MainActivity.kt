@@ -43,10 +43,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (v!!.id) {
             R.id.button_entrar -> {
                 if (editTextEmail.text.toString() == "" || editTextPassword.text.toString() == "") {
-//                    notifyUser("Por favor preencha os campos para efetuar o Login!")
-                    goHome()
+                    notifyUser("Por favor preencha os campos para efetuar o Login!")
                 } else {
-//                    SingIn()
+                    SingIn()
                 }
             }
             R.id.text_view_registrese -> {

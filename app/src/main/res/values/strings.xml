@@ -15,9 +15,15 @@
     <string name="dados_pesoais">Dados Pesoais</string>
     <string name="fist_name">Primeiro nome</string>
     <string name="secondy_name">Segundo nome</string>
-    <string name="sexo_m">M</string>
-    <string name="sexo_f">F</string>
-    <string name="data_nascimento">Data de Nascimento (Ex: Ano-mes-dia)</string>
+
+    <string name="sexo">Qual o seu sexo</string>
+    <string-array name="spinner_sexo">
+        <item>M</item>
+        <item>F</item>
+        <item>O</item>
+    </string-array>
+
+    <string name="data_nascimento">Data de Nascimento (Ex: 2020-05-10)</string>
     <string name="email">Email</string>
     <string name="password">Senha</string>
 
@@ -27,7 +33,10 @@
     <string name="city">Cidade (Ex: São Paulo)</string>
     <string name="state">Estado (Ex: SP)</string>
     <string name="street">Endereço</string>
+    <string name="number">Numero</string>
     <string name="cep">CEP (Ex: xxxxx-xxx)</string>
+    <string name="cell">Celular</string>
+
     <string name="next">Proximo</string>
 
     <!-- Navigation Bottom -->

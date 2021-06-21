@@ -15,11 +15,11 @@ class UserViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     val textCpfUser = itemView.findViewById<TextView>(R.id.text_cpf_user)
     val textPesoUser = itemView.findViewById<TextView>(R.id.text_peso_user)
     val textAlturaUser = itemView.findViewById<TextView>(R.id.text_altura_user)
-    val textSexoUser = itemView.findViewById<TextView>(R.id.text_sexo_user)
+//    val textSexoUser = itemView.findViewById<TextView>(R.id.text_sexo_user)
     val textDateNascimentoUser = itemView.findViewById<TextView>(R.id.text_datanascimento_user)
     val textCityUser = itemView.findViewById<TextView>(R.id.text_cidade_user)
     val textStateUser = itemView.findViewById<TextView>(R.id.text_estado_user)
-    val textAdressNumberUser = itemView.findViewById<TextView>(R.id.text_numero_endereco_user)
+//    val textAdressNumberUser = itemView.findViewById<TextView>(R.id.text_numero_endereco_user)
     val textAdressUser = itemView.findViewById<TextView>(R.id.text_endereco_user)
     val textCepUser = itemView.findViewById<TextView>(R.id.text_cep_user)
 
@@ -31,11 +31,11 @@ class UserViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         textCpfUser.text = user.userCpf
         textPesoUser.text = user.userPeso
         textAlturaUser.text = user.userAltura
-        textSexoUser.text = user.userSexo
+//        textSexoUser.text = user.userSexo
         textDateNascimentoUser.text = user.userDateNascimento
         textCityUser.text = user.userCity
         textStateUser.text = user.userState
-        textAdressNumberUser.text = user.userAdressNumber
+//        textAdressNumberUser.text = user.userAdressNumber
         textAdressUser.text = user.userAdress
         textCepUser.text = user.userCep
 

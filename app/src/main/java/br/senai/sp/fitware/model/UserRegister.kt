@@ -16,9 +16,9 @@ data class UserRegister(
     @SerializedName("cpf")
     var userCpf: String,
     @SerializedName("weight")
-    var userPeso: String,
+    var userPeso: Double,
     @SerializedName("height")
-    var userAltura: String,
+    var userAltura: Double,
     @SerializedName("city")
     var userCity: String,
     @SerializedName("state")
@@ -26,5 +26,9 @@ data class UserRegister(
     @SerializedName("street")
     var userAdress: String,
     @SerializedName("cep")
-    var userCep: String
+    var userCep: String,
+    @SerializedName("number")
+    var userNumber: String,
+    @SerializedName("gender")
+    var userCelular: String
 )
