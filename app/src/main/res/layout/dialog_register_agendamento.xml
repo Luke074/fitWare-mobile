@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#FFFFFF"
     app:cardCornerRadius="16dp">
 
     <RelativeLayout
@@ -12,61 +13,108 @@
 
         <ImageButton
             android:id="@+id/image_button_close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/close_24"
-            android:padding="5dp"
-            android:layout_margin="4dp"
-            android:background="@drawable/button_rounded"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"/>
+            android:layout_alignParentEnd="true"
+            android:layout_margin="4dp"
 
-        <EditText
-            android:id="@+id/username_agendamento"
+            android:background="@drawable/button_rounded"
+            android:padding="5dp"
+            android:src="@drawable/close_24" />
+
+        <TextView
+            android:id="@+id/data_agendamento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
             android:layout_below="@+id/image_button_close"
-            android:layout_alignParentEnd="true"
             android:layout_alignParentStart="true"
-            android:hint="Pedro da Silva"/>
-
-        <EditText
-            android:id="@+id/date_agendamento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_below="@+id/username_agendamento"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentStart="true"
-            android:hint="2020-04-19"/>
+            android:layout_marginEnd="10dp"
+            android:hint="Data: "
 
-        <AutoCompleteTextView
-            android:id="@+id/auto_textview_agendamento"
+            android:textColor="@color/dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hour_agendamento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/date_agendamento"
+            android:layout_below="@+id/data_agendamento"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/dark"
+
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
+            android:hint="Hora: "
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/duracao_agendamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hour_agendamento"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:hint="Duração: "
+            android:textColor="@color/dark"
+
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/limite_pessoas_agendamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/duracao_agendamento"
             android:layout_alignParentStart="true"
-            android:hint="13Hrs as 14Hrs" />
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/dark"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Limite de pessoas:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/personal_agendamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/limite_pessoas_agendamento"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/dark"
+
+            android:hint="Professor: "
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Confirmar"
-            android:layout_marginEnd="10dp"
+            android:layout_below="@+id/personal_agendamento"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:layout_below="@+id/auto_textview_agendamento"
-            android:background="@drawable/inputs_redondos"/>
+
+            android:background="@drawable/inputs_redondos"
+            android:text="Confirmar Vaga"
+            android:textColor="@color/light" />
 
     </RelativeLayout>
 

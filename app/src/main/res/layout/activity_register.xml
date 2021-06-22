@@ -14,16 +14,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/text_view_registrese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:gravity="center"
+            android:text="@string/register"
+            android:textColor="@color/light"
+            android:textSize="22sp" />
+
         <ImageView
             android:id="@+id/image_view_icon"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/fitware_icon"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:contentDescription="@string/logo_icon" />
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+
+
+            android:contentDescription="@string/logo_icon"
+            android:src="@drawable/fitware_icon" />
 
     </RelativeLayout>
 
@@ -37,43 +51,104 @@
            android:layout_height="wrap_content"
            android:orientation="vertical">
 
-           <EditText
-               android:id="@+id/register_fistname"
+<!--           <EditText-->
+<!--               android:id="@+id/register_fistname"-->
+<!--               android:layout_width="wrap_content"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="20dp"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--               android:layout_marginBottom="15dp"-->
+<!--               android:layout_marginTop="30dp"-->
+<!--               android:drawablePadding="10dp"-->
+<!--               android:hint="@string/fist_name"/>-->
+
+           <com.google.android.material.textfield.TextInputLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="match_parent"
+               android:hint="@string/fist_name"
                android:layout_marginStart="20dp"
                android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
+
                android:layout_marginTop="30dp"
                android:drawablePadding="10dp"
-               android:hint="@string/fist_name"/>
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               app:boxStrokeColor="@color/blueLight">
 
-           <EditText
-               android:id="@+id/register_secondyname"
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_fistname"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:textColorHint="@color/blueLight"
+
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+<!--           <EditText-->
+<!--               android:id="@+id/register_secondyname"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="20dp"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--               android:layout_marginBottom="15dp"-->
+<!--               android:drawablePadding="10dp"-->
+<!--               android:hint="@string/secondy_name"/>-->
+
+           <com.google.android.material.textfield.TextInputLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="match_parent"
+               android:hint= "@string/secondy_name"
                android:layout_marginStart="20dp"
                android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
+               android:layout_marginTop="30dp"
                android:drawablePadding="10dp"
-               android:hint="@string/secondy_name"/>
+               app:boxStrokeColor="@color/blueLight"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-           <EditText
-               android:id="@+id/register_datanascimento"
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_secondyname"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+<!--           <EditText-->
+<!--               android:id="@+id/register_datanascimento"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="20dp"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--               android:layout_marginBottom="15dp"-->
+<!--               android:drawablePadding="10dp"-->
+<!--               android:inputType="date"-->
+<!--               android:hint="@string/data_nascimento" />-->
+
+           <com.google.android.material.textfield.TextInputLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="match_parent"
+               android:hint= "@string/data_nascimento"
                android:layout_marginStart="20dp"
                android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
+               android:layout_marginTop="30dp"
                android:drawablePadding="10dp"
-               android:inputType="date"
-               android:hint="@string/data_nascimento" />
+               app:boxStrokeColor="@color/blueLight"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_datanascimento"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
 
            <Spinner
                android:id="@+id/spinner"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_marginStart="20dp"
+               android:layout_marginTop="20dp"
                android:layout_marginEnd="20dp"
                android:drawablePadding="10dp" />
            <TextView
@@ -82,116 +157,333 @@
                android:layout_height="wrap_content"
                android:textSize="18sp"/>
 
-           <EditText
-               android:id="@+id/register_email"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginStart="20dp"
-               android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
-               android:drawablePadding="10dp"
-               android:hint="@string/email" />
+<!--           <EditText-->
+<!--           android:id="@+id/register_email"-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:layout_marginStart="20dp"-->
+<!--           android:layout_marginEnd="20dp"-->
+<!--           android:layout_marginBottom="15dp"-->
+<!--           android:drawablePadding="10dp"-->
+<!--           android:hint="@string/email" />-->
 
-           <EditText
-               android:id="@+id/register_password"
+           <com.google.android.material.textfield.TextInputLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="match_parent"
+               android:hint= "@string/email"
                android:layout_marginStart="20dp"
                android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
+               android:layout_marginTop="30dp"
                android:drawablePadding="10dp"
-               android:inputType="textPassword"
-               android:hint="@string/password" />
+               app:boxStrokeColor="@color/blueLight"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-           <EditText
-               android:id="@+id/register_cpf"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginStart="20dp"
-               android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
-               android:drawablePadding="10dp"
-               android:hint="@string/cpf"/>
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_email"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
 
-           <EditText
-               android:id="@+id/register_weight"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginStart="20dp"
-               android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
-               android:drawablePadding="10dp"
-               android:hint="@string/weight"/>
+           </com.google.android.material.textfield.TextInputLayout>
 
-           <EditText
-               android:id="@+id/register_height"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginStart="20dp"
-               android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
-               android:drawablePadding="10dp"
-               android:hint="@string/height" />
+<!--           <EditText-->
+<!--               android:id="@+id/register_password"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="20dp"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--               android:layout_marginBottom="15dp"-->
+<!--               android:drawablePadding="10dp"-->
+<!--               android:inputType="textPassword"-->
+<!--               android:hint="@string/password" />-->
 
-           <EditText
-               android:id="@+id/register_city"
+           <com.google.android.material.textfield.TextInputLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="match_parent"
+               android:hint= "@string/password"
                android:layout_marginStart="20dp"
                android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
+               android:layout_marginTop="30dp"
                android:drawablePadding="10dp"
-               android:hint="@string/city" />
+               app:boxStrokeColor="@color/blueLight"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-           <EditText
-               android:id="@+id/register_state"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginStart="20dp"
-               android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
-               android:drawablePadding="10dp"
-               android:hint="@string/state" />
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_password"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
 
-           <EditText
-               android:id="@+id/register_street"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginStart="20dp"
-               android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
-               android:drawablePadding="10dp"
-               android:hint="@string/street" />
+           </com.google.android.material.textfield.TextInputLayout>
 
-           <EditText
-               android:id="@+id/register_cep"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginStart="20dp"
-               android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
-               android:drawablePadding="10dp"
-               android:hint="@string/cep" />
+<!--           <EditText-->
+<!--               android:id="@+id/register_cpf"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="20dp"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--               android:layout_marginBottom="15dp"-->
+<!--               android:drawablePadding="10dp"-->
+<!--               android:hint="@string/cpf"/>-->
 
-           <EditText
-               android:id="@+id/register_number"
+           <com.google.android.material.textfield.TextInputLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="match_parent"
+               android:hint= "@string/cpf"
                android:layout_marginStart="20dp"
                android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
+               android:layout_marginTop="30dp"
                android:drawablePadding="10dp"
-               android:hint="@string/number" />
+               app:boxStrokeColor="@color/blueLight"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-           <EditText
-               android:id="@+id/register_cell"
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_cpf"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--           <EditText-->
+<!--               android:id="@+id/register_weight"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="20dp"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--               android:layout_marginBottom="15dp"-->
+<!--               android:drawablePadding="10dp"-->
+<!--               android:hint="@string/weight"/>-->
+
+           <com.google.android.material.textfield.TextInputLayout
                android:layout_width="match_parent"
-               android:layout_height="wrap_content"
+               android:layout_height="match_parent"
+               android:hint= "@string/weight"
                android:layout_marginStart="20dp"
                android:layout_marginEnd="20dp"
-               android:layout_marginBottom="15dp"
+               android:layout_marginTop="30dp"
                android:drawablePadding="10dp"
-               android:hint="@string/cell" />
+               app:boxStrokeColor="@color/blueLight"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_weight"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+<!--           <EditText-->
+<!--               android:id="@+id/register_height"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="20dp"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--               android:layout_marginBottom="15dp"-->
+<!--               android:drawablePadding="10dp"-->
+<!--               android:hint="@string/height" />-->
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:hint= "@string/height"
+               android:layout_marginStart="20dp"
+               android:layout_marginEnd="20dp"
+               android:layout_marginTop="30dp"
+               android:drawablePadding="10dp"
+               app:boxStrokeColor="@color/blueLight"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_height"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+<!--           <EditText-->
+<!--               android:id="@+id/register_city"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="20dp"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--               android:layout_marginBottom="15dp"-->
+<!--               android:drawablePadding="10dp"-->
+<!--               android:hint="@string/city" />-->
+
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:hint= "@string/city"
+               android:layout_marginStart="20dp"
+               android:layout_marginEnd="20dp"
+               android:layout_marginTop="30dp"
+               android:drawablePadding="10dp"
+               app:boxStrokeColor="@color/blueLight"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_city"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--           <EditText-->
+<!--               android:id="@+id/register_state"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="20dp"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--               android:layout_marginBottom="15dp"-->
+<!--               android:drawablePadding="10dp"-->
+<!--               android:hint="@string/state" />-->
+
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:hint= "@string/state"
+               android:layout_marginStart="20dp"
+               android:layout_marginEnd="20dp"
+               android:layout_marginTop="30dp"
+               android:drawablePadding="10dp"
+               app:boxStrokeColor="@color/blueLight"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_state"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+<!--           <EditText-->
+<!--               android:id="@+id/register_street"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="20dp"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--               android:layout_marginBottom="15dp"-->
+<!--               android:drawablePadding="10dp"-->
+<!--               android:hint="@string/street" />-->
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:hint= "@string/street"
+               android:layout_marginStart="20dp"
+               android:layout_marginEnd="20dp"
+               android:layout_marginTop="30dp"
+               android:drawablePadding="10dp"
+               app:boxStrokeColor="@color/blueLight"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_street"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--           <EditText-->
+<!--               android:id="@+id/register_cep"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="20dp"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--               android:layout_marginBottom="15dp"-->
+<!--               android:drawablePadding="10dp"-->
+<!--               android:hint="@string/cep" />-->
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:hint= "@string/cep"
+               android:layout_marginStart="20dp"
+               android:layout_marginEnd="20dp"
+               android:layout_marginTop="30dp"
+               android:drawablePadding="10dp"
+               app:boxStrokeColor="@color/blueLight"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_cep"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--           <EditText-->
+<!--               android:id="@+id/register_number"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="20dp"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--               android:layout_marginBottom="15dp"-->
+<!--               android:drawablePadding="10dp"-->
+<!--               android:hint="@string/number" />-->
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:hint= "@string/number"
+               android:layout_marginStart="20dp"
+               android:layout_marginEnd="20dp"
+               android:layout_marginTop="30dp"
+               android:drawablePadding="10dp"
+               app:boxStrokeColor="@color/blueLight"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_number"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--           <EditText-->
+<!--               android:id="@+id/register_cell"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="20dp"-->
+<!--               android:layout_marginEnd="20dp"-->
+<!--               android:layout_marginBottom="15dp"-->
+<!--               android:drawablePadding="10dp"-->
+<!--               android:hint="@string/cell" />-->
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:hint= "@string/cell"
+               android:layout_marginStart="20dp"
+               android:layout_marginEnd="20dp"
+               android:layout_marginTop="30dp"
+               android:drawablePadding="10dp"
+               app:boxStrokeColor="@color/blueLight"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/register_cell"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+
+           </com.google.android.material.textfield.TextInputLayout>
+
 
            <Button
                android:id="@+id/button_register_end"
@@ -201,7 +493,9 @@
                android:text="@string/next"
                android:textSize="20sp"
                android:textColor="@color/light"
+               android:layout_marginTop="20dp"
                android:layout_marginBottom="20dp"
+
                android:layout_marginStart="20dp"
                android:layout_marginEnd="20dp"/>
 

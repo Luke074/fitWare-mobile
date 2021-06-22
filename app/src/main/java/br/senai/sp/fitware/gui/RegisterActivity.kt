@@ -10,6 +10,7 @@ import br.senai.sp.fitware.R
 import br.senai.sp.fitware.api.RetrofitApi
 import br.senai.sp.fitware.api.rotas.RegisterCall
 import br.senai.sp.fitware.model.UserRegister
+import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

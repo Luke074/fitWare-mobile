@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ripple android:color="@color/secondy"
+<ripple android:color="@color/dark"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/input_redondo">
         <shape android:shape="rectangle">
-            <solid android:color="@color/light"/>
+            <solid android:color="@color/blueLight"/>
             <corners android:radius="20dp" />
+            <stroke android:color="@color/dark"/>
         </shape>
     </item>
 </ripple>

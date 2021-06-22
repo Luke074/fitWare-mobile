@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/card_rounded"
-    android:backgroundTint="@color/secondyLight"
+
+    android:backgroundTint="@color/light"
     android:orientation="vertical"
     android:padding="10dp"
     android:layout_margin="5dp">
@@ -13,21 +13,30 @@
         android:id="@+id/name_user_agendamento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="nome user"
+        android:text="Nome usuario"
         style="@style/TextDetails"/>
+
+
 
     <TextView
         android:id="@+id/date_user_agendamento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="data user"
-        style="@style/TextDetails" />
+        android:text="Data da aula"
+        style="@style/TextDetails"
+        android:drawableStart="@drawable/ic_baseline_perm_contact_calendar_24"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/blueLight"
+        />
 
     <TextView
         android:id="@+id/hour_user_agendamento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="horario user"
-        style="@style/TextDetails" />
+        android:text="Horario da aula"
+        style="@style/TextDetails"
+        android:drawableStart="@drawable/ic_baseline_access_time_24"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/blueLight"/>
 
 </LinearLayout>
