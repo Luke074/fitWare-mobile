@@ -41,8 +41,12 @@
 
     <style name="StyledTilEditText">
         <item name="android:theme">@style/StyledTilEditTextTheme</item>
-        <item name="android:paddingTop">4dp</item>
+
+        <item name="colorControlActivated">@color/blueLight</item> // Cor linha e texto quando recebe foco
+
         <item name="android:textColorHint">@color/blueLight</item> // Cor texto(hint) sem foco
     </style>
+
+
 
 </resources>

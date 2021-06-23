@@ -16,7 +16,7 @@
     <string name="fist_name">Primeiro nome</string>
     <string name="secondy_name">Sobrenome</string>
 
-    <string name="sexo">Qual o seu sexo</string>
+    <string name="sexo">Qual o seu sexo?</string>
     <string-array name="spinner_sexo">
         <item>Selecione de acordo com seu gênero</item>
         <item>M</item>

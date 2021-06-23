@@ -69,8 +69,9 @@
                android:hint="@string/fist_name"
                android:layout_marginStart="20dp"
                android:layout_marginEnd="20dp"
-
                android:layout_marginTop="30dp"
+               android:textColorHighlight="@color/blueLight"
+
                android:drawablePadding="10dp"
                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                app:boxStrokeColor="@color/blueLight">
@@ -80,6 +81,11 @@
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
                    android:textColorHint="@color/blueLight"
+                   android:drawableTint="@color/blueLight"
+
+                   android:drawableStart="@drawable/ic_baseline_assignment_ind_24"
+                   android:drawablePadding="10dp"
+
 
                    />
 
@@ -110,6 +116,9 @@
                    android:id="@+id/register_secondyname"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
+                   android:drawableStart="@drawable/ic_baseline_assignment_ind_24"
+                   android:drawableTint="@color/blueLight"
+                   android:drawablePadding="10dp"
                    />
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -140,23 +149,33 @@
                    android:id="@+id/register_datanascimento"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
+                   android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+                   android:drawableTint="@color/blueLight"
+                   android:drawablePadding="10dp"
                    />
 
            </com.google.android.material.textfield.TextInputLayout>
-
+           <TextView
+               android:id="@+id/msg_spinner"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="18sp"
+               android:layout_marginStart="20dp"
+               android:layout_marginEnd="20dp"
+               android:paddingTop="10dp"
+               android:hint="@string/sexo"
+               />
            <Spinner
                android:id="@+id/spinner"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_marginStart="20dp"
-               android:layout_marginTop="20dp"
+               android:layout_marginBottom="20dp"
                android:layout_marginEnd="20dp"
-               android:drawablePadding="10dp" />
-           <TextView
-               android:id="@+id/msg_spinner"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:textSize="18sp"/>
+
+               android:background="@drawable/shape_spinner"
+              />
+
 
 <!--           <EditText-->
 <!--           android:id="@+id/register_email"-->
@@ -174,7 +193,7 @@
                android:hint= "@string/email"
                android:layout_marginStart="20dp"
                android:layout_marginEnd="20dp"
-               android:layout_marginTop="30dp"
+
                android:drawablePadding="10dp"
                app:boxStrokeColor="@color/blueLight"
                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -183,6 +202,9 @@
                    android:id="@+id/register_email"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
+                   android:drawableStart="@drawable/ic_baseline_email_24"
+                   android:drawableTint="@color/blueLight"
+                   android:drawablePadding="10dp"
                    />
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -213,6 +235,9 @@
                    android:id="@+id/register_password"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
+                   android:drawableStart="@drawable/ic_baseline_lock_24"
+                   android:drawableTint="@color/blueLight"
+                   android:drawablePadding="10dp"
                    />
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -242,6 +267,9 @@
                    android:id="@+id/register_cpf"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
+                   android:drawableStart="@drawable/ic_baseline_account_circle_24"
+                   android:drawableTint="@color/blueLight"
+                   android:drawablePadding="10dp"
                    />
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -272,7 +300,9 @@
                    android:id="@+id/register_weight"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
-                   />
+                   android:drawableStart="@drawable/ic_baseline_accessibility_24"
+                   android:drawablePadding="10dp"
+                   android:drawableTint="@color/blueLight" />
 
            </com.google.android.material.textfield.TextInputLayout>
 
@@ -301,6 +331,9 @@
                    android:id="@+id/register_height"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
+                   android:drawableStart="@drawable/ic_baseline_height_24"
+                   android:drawablePadding="10dp"
+                   android:drawableTint="@color/blueLight"
                    />
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -331,6 +364,9 @@
                    android:id="@+id/register_city"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
+                   android:drawableStart="@drawable/ic_baseline_location_city_24"
+                   android:drawablePadding="10dp"
+                   android:drawableTint="@color/blueLight"
                    />
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -362,6 +398,9 @@
                    android:id="@+id/register_state"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
+                   android:drawableStart="@drawable/ic_baseline_location_city_24"
+                   android:drawablePadding="10dp"
+                   android:drawableTint="@color/blueLight"
                    />
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -391,6 +430,9 @@
                    android:id="@+id/register_street"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
+                   android:drawableStart="@drawable/ic_baseline_location_on_24"
+                   android:drawablePadding="10dp"
+                   android:drawableTint="@color/blueLight"
                    />
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -421,6 +463,10 @@
                    android:id="@+id/register_cep"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
+
+                   android:drawableStart="@drawable/ic_baseline_my_location_24"
+                   android:drawablePadding="10dp"
+                   android:drawableTint="@color/blueLight"
                    />
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -451,6 +497,9 @@
                    android:id="@+id/register_number"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
+                   android:drawableStart="@drawable/ic_baseline_looks_one_24"
+                   android:drawablePadding="10dp"
+                   android:drawableTint="@color/blueLight"
                    />
 
            </com.google.android.material.textfield.TextInputLayout>
@@ -481,6 +530,9 @@
                    android:id="@+id/register_cell"
                    android:layout_width="match_parent"
                    android:layout_height="match_parent"
+                   android:drawableStart="@drawable/ic_baseline_smartphone_24"
+                   android:drawablePadding="10dp"
+                   android:drawableTint="@color/blueLight"
                    />
 
            </com.google.android.material.textfield.TextInputLayout>
