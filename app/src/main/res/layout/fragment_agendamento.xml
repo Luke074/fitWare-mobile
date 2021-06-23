@@ -5,32 +5,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <Button
-        android:id="@+id/button_add_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Agende seu dia"
-        android:textColor="@color/light"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="20dp"
-        android:background="@drawable/inputs_redondos"/>
+<!--    <Button-->
+<!--        android:id="@+id/button_add_date"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginStart="21dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginEnd="19dp"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:background="@drawable/inputs_redondos"-->
+<!--        android:text="@string/agende"-->
+<!--        android:textColor="@color/light" />-->
 
     <TextView
         android:id="@+id/textview_dias_marcados"
         style="@style/TextTittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button_add_date"
-        android:layout_alignStart="@+id/button_add_date"
-        android:layout_alignEnd="@+id/button_add_date"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="5dp"
-
-        android:layout_marginEnd="219dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
         android:drawableStart="@drawable/ic_baseline_calendar_today_24"
-        android:drawablePadding="2dp"
+        android:drawablePadding="8dp"
         android:drawableTint="@color/blueLight"
         android:text="@string/days"
         android:textColor="@color/blueLight"
@@ -45,6 +45,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="10dp"
-        tools:listitem="@layout/holder_agendamento_layout" />
+        tools:listitem="@layout/aulas_disponieveis" />
 
 </RelativeLayout>

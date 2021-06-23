@@ -7,15 +7,15 @@ import br.senai.sp.fitware.R
 import br.senai.sp.fitware.model.Aulas
 
 class AulaOnlineViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-    val namePersonAulaOnline = itemView.findViewById<TextView>(R.id.personal_name_online)
-    val durationAulaOnline = itemView.findViewById<TextView>(R.id.text_view_duration)
-    val limitPersonAulaOnline = itemView.findViewById<TextView>(R.id.text_view_limit_person)
-    val linkAulaOnline = itemView.findViewById<TextView>(R.id.link_online)
+    val namePersonalAula = itemView.findViewById<TextView>(R.id.tv_professor_aula)
+    val dataAula = itemView.findViewById<TextView>(R.id.tv_data_aula)
+    val hourAula = itemView.findViewById<TextView>(R.id.tv_hour_aula)
+    val categoryAula = itemView.findViewById<TextView>(R.id.tv_tipo_treino_aula)
 
-    fun bind(aulaOnline: Aulas){
-        namePersonAulaOnline.text = aulaOnline.namePersonal
-        durationAulaOnline.text = aulaOnline.duration
-        limitPersonAulaOnline.text = aulaOnline.limitPerson
-        linkAulaOnline.text = aulaOnline.link
+    fun bind(aula: Aulas){
+        namePersonalAula.text = aula.personal
+        dataAula.text = aula.date
+        hourAula.text = aula.hour
+        categoryAula.text = aula.category
     }
 }

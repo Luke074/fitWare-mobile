@@ -16,8 +16,6 @@
         android:text="Nome usuario"
         style="@style/TextDetails"/>
 
-
-
     <TextView
         android:id="@+id/date_user_agendamento"
         android:layout_width="match_parent"
@@ -36,6 +34,16 @@
         android:text="Horario da aula"
         style="@style/TextDetails"
         android:drawableStart="@drawable/ic_baseline_access_time_24"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/blueLight"/>
+
+
+    <TextView
+        android:id="@+id/link_user_agendamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Link da Aula"
+        style="@style/TextDetails"
         android:drawablePadding="8dp"
         android:drawableTint="@color/blueLight"/>
 

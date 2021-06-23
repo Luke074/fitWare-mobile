@@ -14,7 +14,7 @@
 
     <string name="dados_pesoais">Dados Pesoais</string>
     <string name="fist_name">Primeiro nome</string>
-    <string name="secondy_name">Segundo nome</string>
+    <string name="secondy_name">Sobrenome</string>
 
     <string name="sexo">Qual o seu sexo</string>
     <string-array name="spinner_sexo">
@@ -41,7 +41,7 @@
     <string name="next">Proximo</string>
 
     <!-- Navigation Bottom -->
-    <string name="perfil">Perfil</string>!
+    <string name="perfil">Perfil</string>
     <string name="home">Home</string>
     <string name="aula">Aulas</string>
     <string name="scheduling">Agendamento</string>
@@ -50,6 +50,7 @@
     <string name="welcome">Bem-vindo Ao FitWare</string>
     <string name="academy">Academias</string>
     <!--  Agendamento Activity  -->
-    <string name="days">Dias Marcados:</string>
+    <string name="days">Aulas Disponiveis:</string>
+    <string name="agende">Agende seu dia</string>
 
 </resources>

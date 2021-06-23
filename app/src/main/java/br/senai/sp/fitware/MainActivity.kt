@@ -1,8 +1,6 @@
 package br.senai.sp.fitware.gui
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -13,6 +11,7 @@ import android.widget.Toast
 import br.senai.sp.fitware.R
 import br.senai.sp.fitware.api.rotas.LoginCall
 import br.senai.sp.fitware.api.RetrofitApi
+import br.senai.sp.fitware.api.SessionStudent
 import br.senai.sp.fitware.model.Token
 import br.senai.sp.fitware.model.UserLoginModel
 import com.google.android.material.textfield.TextInputEditText
@@ -28,6 +27,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var editTextPassword: TextInputEditText
     private lateinit var buttonEnter: Button
     private lateinit var token: Token
+    lateinit var sessionStudent: SessionStudent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,6 +40,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         textRegister = findViewById(R.id.text_view_registrese)
         textRegister.setOnClickListener(this)
+
+        sessionStudent = SessionStudent(this)
 
     }
 
@@ -80,16 +82,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 if(response.code().toString() == "201" ||
                     response.code().toString() == "200"){
 
-                    val prefs: SharedPreferences = this@MainActivity.getSharedPreferences(
-                        "preferencias",
-                        Context.MODE_PRIVATE
-                    )
+//                    val prefs: SharedPreferences = this@MainActivity.getSharedPreferences(
+//                        "preferencias",
+//                        Context.MODE_PRIVATE
+//                    )
+//                    prefs.edit().putString("TOKEN", token.token).apply()
+//                    prefs.edit().putString("ID", token.user.userId.toString()).apply()
 
-                    prefs.edit().putString("TOKEN", token.token).apply()
-                    prefs.edit().putString("ID", token.user.userId.toString()).apply()
+                    sessionStudent.saveToken(token!!.token)
 
                     goHome()
-                    Toast.makeText(this@MainActivity, "Token: ${token}", Toast.LENGTH_LONG).show()
+                    Log.i("TOKEN TESTE", token.token)
+//                    Toast.makeText(this@MainActivity, "Token: ${token.token}", Toast.LENGTH_LONG).show()
                 }else{
                     Toast.makeText(this@MainActivity,
                         "email ou senha incorreto", Toast.LENGTH_LONG)

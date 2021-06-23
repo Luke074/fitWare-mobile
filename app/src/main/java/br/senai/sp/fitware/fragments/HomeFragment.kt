@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.senai.sp.fitware.R
 import br.senai.sp.fitware.adapter.AcademyAdapter
-import br.senai.sp.fitware.data.dao.AcademyDataSource
 import br.senai.sp.fitware.model.Academy
 
 class HomeFragment : Fragment() {
@@ -28,7 +27,7 @@ class HomeFragment : Fragment() {
         recyclerAcademy.layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, false)
         recyclerAcademy.adapter = academyAdapter
 
-        academyList = AcademyDataSource.getAcademy(view.context)
+//        academyList = AcademyDataSource.getAcademy(view.context)
 
         academyAdapter.updateAcademy(academyList)
 

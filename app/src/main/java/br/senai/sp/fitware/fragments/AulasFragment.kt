@@ -17,7 +17,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class AulaOnlineFragment : Fragment() {
+class AulasFragment : Fragment() {
 
     private lateinit var recyclerAulaOnline: RecyclerView
     private var aulaOnlineAdapter = AulasAdapter(activity)
