@@ -25,83 +25,153 @@
 
         <TextView
             android:id="@+id/data_agendamento"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/image_button_close"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:hint="Data: "
+            android:text="Data: "
+
 
             android:textColor="@color/dark"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/value_data_agendamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignTop="@id/data_agendamento"
+            android:layout_below="@id/data_agendamento"
+            android:layout_toEndOf= "@id/data_agendamento"
+            android:text="10/05/2020"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark"
+            android:layout_marginStart="10dp"
+            />
 
         <TextView
             android:id="@+id/hour_agendamento"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/data_agendamento"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="10dp"
-            android:textColor="@color/dark"
 
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:hint="Hora: "
+            android:text="Hora:"
+            android:textColor="@color/dark"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/value_hour_agendamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignTop="@id/hour_agendamento"
+            android:layout_below="@id/hour_agendamento"
+            android:layout_toEndOf= "@id/hour_agendamento"
+            android:text="13:00 Hrs"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark"
+            android:layout_marginStart="10dp"
+            />
 
         <TextView
             android:id="@+id/duracao_agendamento"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/hour_agendamento"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
+
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:hint="Duração: "
+
+            android:text="Duração: "
             android:textColor="@color/dark"
 
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/value_duracao_agendamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_alignTop="@id/duracao_agendamento"
+            android:layout_below="@id/duracao_agendamento"
+            android:layout_toEndOf= "@id/duracao_agendamento"
+            android:text="01:00h"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark"
+
+            />
 
         <TextView
             android:id="@+id/limite_pessoas_agendamento"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/duracao_agendamento"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
             android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginEnd="10dp"
+            android:text="Limite de pessoas:"
+            android:textColor="@color/dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/value_limite_pessoas_agendamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignTop="@id/limite_pessoas_agendamento"
+            android:layout_below="@id/limite_pessoas_agendamento"
+            android:layout_toEndOf= "@id/limite_pessoas_agendamento"
+            android:text="20"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:textColor="@color/dark"
 
+            />
+
+        <TextView
+            android:id="@+id/personal_agendamento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/limite_pessoas_agendamento"
+            android:layout_alignParentStart="true"
+
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:hint="Limite de pessoas:"
+
+            android:text="Professor: "
+
+            android:textColor="@color/dark"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/personal_agendamento"
-            android:layout_width="match_parent"
+            android:id="@+id/value_personal_agendamento"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/limite_pessoas_agendamento"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:textColor="@color/dark"
 
-            android:hint="Professor: "
+            android:layout_alignTop="@id/personal_agendamento"
+            android:layout_below="@id/personal_agendamento"
+            android:layout_toEndOf= "@id/personal_agendamento"
+            android:text="Marcelo"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/dark"
+            android:layout_marginStart="10dp"
+            />
 
         <Button
             android:layout_width="match_parent"
@@ -115,6 +185,8 @@
             android:background="@drawable/inputs_redondos"
             android:text="Confirmar Vaga"
             android:textColor="@color/light" />
+
+
 
     </RelativeLayout>
 

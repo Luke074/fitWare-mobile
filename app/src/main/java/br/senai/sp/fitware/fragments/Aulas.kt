@@ -9,18 +9,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.senai.sp.fitware.R
 import br.senai.sp.fitware.adapter.AulasAdapter
-import br.senai.sp.fitware.api.rotas.AulasAgendadasCall
 import br.senai.sp.fitware.api.RetrofitApi
+import br.senai.sp.fitware.api.rotas.AulasAgendadasCall
 import br.senai.sp.fitware.model.Aulas
 import kotlinx.android.synthetic.main.fragment_online.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class AulaOnlineFragment : Fragment() {
-
-    private lateinit var recyclerAulaOnline: RecyclerView
-    private var aulaOnlineAdapter = AulasAdapter(activity)
+class Aulas : Fragment(){
+    private lateinit var recyclerAula: RecyclerView
+    private var aulaAdapter = AulasAdapter(activity)
 //    private var aulaOnlineList = emptyList<AulaOnline>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,11 +42,12 @@ class AulaOnlineFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        recyclerAulaOnline = recyclerview_aula_online
-        aulaOnlineAdapter = AulasAdapter(activity)
-        recyclerAulaOnline.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        recyclerAula = recyclerview_aula_online
 
-        recyclerAulaOnline.adapter = aulaOnlineAdapter
+        aulaAdapter = AulasAdapter(activity)
+        recyclerAula.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+
+        recyclerAula.adapter = aulaAdapter
 
         setAulasOnline()
     }
@@ -61,7 +61,7 @@ class AulaOnlineFragment : Fragment() {
 
         val call = aulaOnlineCall.getAulasAgendadas()
 
-        call.enqueue(object : Callback<List<Aulas>>{
+        call.enqueue(object : Callback<List<Aulas>> {
             override fun onFailure(call: Call<List<Aulas>>, t: Throwable) {
                 Toast.makeText(activity, "Não foi...", Toast.LENGTH_SHORT).show()
                 Log.e("ERRO_CONEXÃO", t.message.toString())
@@ -73,7 +73,7 @@ class AulaOnlineFragment : Fragment() {
             ) {
                 if(response.code() == 201){
                     aulaOnlineList = response.body()!!
-                    aulaOnlineAdapter.updateAulaOnline(aulaOnlineList)
+                    aulaAdapter.updateAulaOnline(aulaOnlineList)
                 }
                 else{
                     Toast.makeText(activity, "Nenhuma aula preparada ainda!", Toast.LENGTH_SHORT).show()
@@ -89,5 +89,6 @@ class AulaOnlineFragment : Fragment() {
 
         inflater.inflate(R.menu.menu_profile, menu)
     }
+
 
 }

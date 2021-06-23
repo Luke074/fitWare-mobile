@@ -4,7 +4,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.senai.sp.fitware.R
-import br.senai.sp.fitware.model.AulaOnline
+import br.senai.sp.fitware.model.Aulas
 
 class AulaOnlineViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     val namePersonAulaOnline = itemView.findViewById<TextView>(R.id.personal_name_online)
@@ -12,7 +12,7 @@ class AulaOnlineViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     val limitPersonAulaOnline = itemView.findViewById<TextView>(R.id.text_view_limit_person)
     val linkAulaOnline = itemView.findViewById<TextView>(R.id.link_online)
 
-    fun bind(aulaOnline: AulaOnline){
+    fun bind(aulaOnline: Aulas){
         namePersonAulaOnline.text = aulaOnline.namePersonal
         durationAulaOnline.text = aulaOnline.duration
         limitPersonAulaOnline.text = aulaOnline.limitPerson

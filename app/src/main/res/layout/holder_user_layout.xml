@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@color/blueLight">
+    android:background="@color/light">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -133,8 +133,6 @@
             android:text="06364-570"
             style="@style/TextInfoUser"
             android:layout_below="@id/text_endereco_user"/>
-
-
     </RelativeLayout>
 
 </LinearLayout>

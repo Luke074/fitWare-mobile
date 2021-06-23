@@ -6,12 +6,12 @@ import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import br.senai.sp.fitware.R
 import br.senai.sp.fitware.holder.AulaOnlineViewHolder
-import br.senai.sp.fitware.model.AulaOnline
+import br.senai.sp.fitware.model.Aulas
 
-class AulaOnlineAdapter(val context: FragmentActivity?): RecyclerView.Adapter<AulaOnlineViewHolder>() {
-    var aulaOnlineList = listOf<AulaOnline>()
+class AulasAdapter(val context: FragmentActivity?): RecyclerView.Adapter<AulaOnlineViewHolder>() {
+    var aulaOnlineList = listOf<Aulas>()
 
-    fun updateAulaOnline(list: List<AulaOnline>){
+    fun updateAulaOnline(list: List<Aulas>){
         aulaOnlineList = list
         notifyDataSetChanged()
     }

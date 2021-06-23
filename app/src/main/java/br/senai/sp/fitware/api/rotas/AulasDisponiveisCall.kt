@@ -4,8 +4,9 @@ import br.senai.sp.fitware.model.Aulas
 import retrofit2.Call
 import retrofit2.http.GET
 
-interface AulasAgendadasCall {
+interface AulasDisponiveisCall {
 
-    @GET("schedule/:id/student")
+    @GET("schedule")
     fun getAulasAgendadas() : Call<List<Aulas>>
+
 }
