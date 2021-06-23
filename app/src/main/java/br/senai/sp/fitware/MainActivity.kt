@@ -65,19 +65,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             password = editTextPassword.text.toString()
         )
 
-
-
         val retrofit = RetrofitApi.getRetrofit()
         val loginCall = retrofit.create(LoginCall::class.java)
 
         val call = loginCall.singIn(user)
 
-        call.enqueue(object : Callback<UserLoginModel> {
+        call.enqueue(object : Callback<Token> {
             override fun onResponse(
-                call: Call<UserLoginModel>,
-                response: Response<UserLoginModel>
+                call: Call<Token>,
+                response: Response<Token>
             ) {
-                val responseBody = response.body()
+                token = response.body()!!
 
                 if(response.code().toString() == "201" ||
                     response.code().toString() == "200"){
@@ -86,20 +84,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         "preferencias",
                         Context.MODE_PRIVATE
                     )
+
                     prefs.edit().putString("TOKEN", token.token).apply()
+                    prefs.edit().putString("ID", token.user.userId.toString()).apply()
 
                     goHome()
-
                     Toast.makeText(this@MainActivity, "Token: ${token}", Toast.LENGTH_LONG).show()
                 }else{
                     Toast.makeText(this@MainActivity,
                         "email ou senha incorreto", Toast.LENGTH_LONG)
                         .show()
-                    Log.e("TESTE", responseBody.toString())
+                    Log.e("TESTE", token.toString())
                 }
             }
 
-            override fun onFailure(call: Call<UserLoginModel>, t: Throwable) {
+            override fun onFailure(call: Call<Token>, t: Throwable) {
                 Toast.makeText(this@MainActivity, "A conexão falhou :(", Toast.LENGTH_LONG).show()
                 Log.e("ERRO_CONEXÃO", t.message.toString())
             }
