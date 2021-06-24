@@ -6,16 +6,16 @@ import androidx.recyclerview.widget.RecyclerView
 import br.senai.sp.fitware.R
 import br.senai.sp.fitware.model.Aulas
 
-class AulaOnlineViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-    val namePersonalAula = itemView.findViewById<TextView>(R.id.tv_professor_aula)
+class AulasViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+//    val namePersonalAula = itemView.findViewById<TextView>(R.id.tv_professor_aula)
     val dataAula = itemView.findViewById<TextView>(R.id.tv_data_aula)
     val hourAula = itemView.findViewById<TextView>(R.id.tv_hour_aula)
-    val categoryAula = itemView.findViewById<TextView>(R.id.tv_tipo_treino_aula)
+//    val categoryAula = itemView.findViewById<TextView>(R.id.tv_tipo_treino_aula)
 
     fun bind(aula: Aulas){
-        namePersonalAula.text = aula.personal
-        dataAula.text = aula.date
+//        namePersonalAula.text = aula.personal
+        dataAula.text = aula.date.toString()
         hourAula.text = aula.hour
-        categoryAula.text = aula.category
+//        categoryAula.text = aula.category.toString()
     }
 }

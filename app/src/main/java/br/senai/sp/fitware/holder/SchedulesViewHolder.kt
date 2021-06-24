@@ -7,13 +7,15 @@ import br.senai.sp.fitware.R
 import br.senai.sp.fitware.model.Aulas
 
 class SchedulesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-    val textNameSchedules = itemView.findViewById<TextView>(R.id.name_user_agendamento)
-    val textDateSchedules = itemView.findViewById<TextView>(R.id.date_user_agendamento)
-    val textHourSchedules = itemView.findViewById<TextView>(R.id.hour_user_agendamento)
+//    val namePersonalAula = itemView.findViewById<TextView>(R.id.tv_professor_aula)
+    val dataAula = itemView.findViewById<TextView>(R.id.tv_data_aula)
+    val hourAula = itemView.findViewById<TextView>(R.id.tv_hour_aula)
+    val categoryAula = itemView.findViewById<TextView>(R.id.tv_tipo_treino_aula)
 
-    fun bind(aulas: Aulas){
-        textNameSchedules.text = aulas.category
-        textDateSchedules.text = aulas.date
-        textHourSchedules.text = aulas.hour
+    fun bind(aula: Aulas){
+//        namePersonalAula.text = aula.personal
+        dataAula.text = aula.date
+        hourAula.text = aula.hour
+        categoryAula.text = aula.category.toString()
     }
 }

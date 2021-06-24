@@ -23,7 +23,7 @@ class SchedulesFragment : Fragment() {
 
     private lateinit var recyclerSchedules: RecyclerView
     private var schedulesAdapter = SchedulesAdapter(activity)
-    lateinit var sessionStudent: SessionStudent
+    private lateinit var sessionStudent: SessionStudent
 //    private var schedulesList = listOf<Schedules>()
 
     override fun onCreateView(

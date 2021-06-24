@@ -1,13 +1,12 @@
 package br.senai.sp.fitware.model
 
 import com.google.gson.annotations.SerializedName
+import java.util.*
 
 data class Aulas(
     var id: Long,
     @SerializedName("TraningCategories")
-    var category: String,
-    @SerializedName("PersonalTrainer")
-    var personal: String,
+    var category: Category,
     var date: String,
     var hour: String,
     @SerializedName("limit_person")
