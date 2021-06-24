@@ -15,7 +15,6 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-
         <activity android:name=".gui.RegisterActivity" android:screenOrientation="portrait">
 
         </activity>
