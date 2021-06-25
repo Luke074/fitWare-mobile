@@ -1,6 +1,5 @@
 package br.senai.sp.fitware.adapter
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,14 +39,14 @@ class SchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter<Sch
         holder.namePersonalAula.text = "Personal: ${aulasDisponiveis.personalName.name}"
 
         //formate date
-        val maskDate: SimpleMaskFormatter = SimpleMaskFormatter("NNNN/NN/NN")
-        val mtwDate: MaskTextWatcher = MaskTextWatcher(holder.dataAula, maskDate)
+        val maskDate = SimpleMaskFormatter("NNNN/NN/NN")
+        val mtwDate = MaskTextWatcher(holder.dataAula, maskDate)
         holder.dataAula.addTextChangedListener(mtwDate)
         holder.dataAula.text = aulasDisponiveis.date
 
         //formate hour
-        val maskHour: SimpleMaskFormatter = SimpleMaskFormatter("NN:NN")
-        val mtwHour: MaskTextWatcher = MaskTextWatcher(holder.hourAula, maskHour)
+        val maskHour = SimpleMaskFormatter("NN:NN")
+        val mtwHour = MaskTextWatcher(holder.hourAula, maskHour)
         holder.hourAula.addTextChangedListener(mtwHour)
         holder.hourAula.text = aulasDisponiveis.hour
 
@@ -55,17 +54,22 @@ class SchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter<Sch
 
         holder.cardAula.setOnClickListener {
             val dialog = DialogNewAgendamento()
-            dialog.updateData()
+
+            dialog.updadteHour(aulasDisponiveis.hour)
+            dialog.updateDate(aulasDisponiveis.date)
+            dialog.updateLimitPersonal(aulasDisponiveis.limitPerson)
+            dialog.updateNamePersonal(aulasDisponiveis.personalName.name)
+
             dialog.show((context as AppCompatActivity).supportFragmentManager, "Novo Agendamento")
         }
 
     }
 
     class Holder(view: View) : RecyclerView.ViewHolder(view) {
-        val namePersonalAula = itemView.findViewById<TextView>(R.id.tv_professor_aula)
-        val dataAula = itemView.findViewById<TextView>(R.id.tv_data_aula)
-        val hourAula = itemView.findViewById<TextView>(R.id.tv_hour_aula)
-        val categoryAula = itemView.findViewById<TextView>(R.id.tv_tipo_treino_aula)
-        val cardAula = itemView.findViewById<CardView>(R.id.card_aulas)
+        val namePersonalAula: TextView = itemView.findViewById(R.id.tv_professor_aula)
+        val dataAula: TextView = itemView.findViewById(R.id.tv_data_aula)
+        val hourAula: TextView = itemView.findViewById(R.id.tv_hour_aula)
+        val categoryAula: TextView = itemView.findViewById(R.id.tv_tipo_treino_aula)
+        val cardAula: CardView = itemView.findViewById(R.id.card_aulas)
     }
 }

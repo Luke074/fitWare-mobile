@@ -14,9 +14,6 @@ import br.senai.sp.fitware.api.RetrofitApi
 import br.senai.sp.fitware.api.SessionStudent
 import br.senai.sp.fitware.api.rotas.AulasDisponiveisCall
 import br.senai.sp.fitware.model.Schedules
-import com.github.rtoshiro.util.format.SimpleMaskFormatter
-import com.github.rtoshiro.util.format.text.MaskTextWatcher
-import kotlinx.android.synthetic.main.card_aulas.*
 import kotlinx.android.synthetic.main.fragment_agendamento.*
 import retrofit2.Call
 import retrofit2.Callback
