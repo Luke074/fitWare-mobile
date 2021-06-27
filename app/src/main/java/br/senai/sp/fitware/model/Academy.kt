@@ -7,12 +7,8 @@ data class Academy(
     var id: Long,
     @SerializedName("name")
     var academyName: String,
-    @SerializedName("cep")
-    var academyCep: String,
-    @SerializedName("street")
-    var academyStreet: String,
-    @SerializedName("city")
-    var academyCity: String,
-//    @SerializedName("")
-    var academyImage: Drawable
+    @SerializedName("email")
+    var emailAcademy: String,
+    @SerializedName("AddressAcademy")
+    var addressAcademy: AddresAcademy
 )

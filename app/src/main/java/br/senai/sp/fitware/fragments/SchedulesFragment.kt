@@ -77,8 +77,6 @@ class SchedulesFragment : Fragment() {
                 if(response.code() == 201 || response.code() == 200){
                     aulasList = response.body()!!
 
-                    Log.i("XPTO", aulasList[0].personalName.name)
-
                     schedulesAdapter.updateSchedules(aulasList)
                 }
                 else{

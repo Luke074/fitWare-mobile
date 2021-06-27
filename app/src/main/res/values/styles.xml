@@ -51,5 +51,11 @@
         <item name="android:windowMinWidthMinor">95%</item>
     </style>
 
+    <style name="detailsCard" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/dark</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
 </resources>
