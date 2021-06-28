@@ -1,90 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/card_rounded"
-    android:backgroundTint="@color/secondyLight"
+    android:backgroundTint="@color/primary"
     android:orientation="vertical"
-    android:padding="10dp"
-    android:layout_margin="7dp">
+    android:layout_margin="7dp"
+    app:cardCornerRadius="16dp">
 
-    <TextView
-        android:id="@+id/personal_name_online"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="titulo da aula"
-        android:gravity="center"
-        android:textSize="28sp"
-        android:textColor="@color/dark"
-        android:textStyle="bold"
-        android:layout_alignParentTop="true"/>
+        android:layout_height="match_parent"
+        android:padding="10dp">
 
-    <TextView
-        android:id="@+id/title_duracao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Duração da aula"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        android:layout_below="@id/personal_name_online"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="5dp"/>
+        <TextView
+            android:id="@+id/tv_aula_include"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="Titulo da Aula"
+            android:textColor="@color/light"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
 
-    <TextView
-        android:id="@+id/text_view_duration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="13Hrs as 14Hrs"
-        android:gravity="center"
-        android:layout_below="@id/title_duracao"
-        android:layout_alignParentStart="true"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_marginStart="5dp"/>
+        <TextView
+            android:id="@+id/data_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_aula_include"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Data: "
+            android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+            android:drawableTint="@color/light"
+            android:drawablePadding="10dp"
+            android:textColor="@color/light"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/title_limite_pessoas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Limite de Pessoas"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        android:layout_below="@id/personal_name_online"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"/>
+        <TextView
+            android:id="@+id/value_data_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/data_include"
+            android:layout_alignParentStart="true"
+            android:text="10/05/2020"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/light"
+            android:layout_marginStart="10dp" />
 
-    <TextView
-        android:id="@+id/text_view_limit_person"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="30 pessoas"
-        android:gravity="center"
-        android:layout_below="@id/title_limite_pessoas"
-        android:layout_alignParentEnd="true"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/limite_pessoas_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/value_data_include"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Limite de Pessoas: "
+            android:drawableStart="@drawable/ic_baseline_account_circle_24"
+            android:drawableTint="@color/light"
+            android:drawablePadding="10dp"
+            android:textColor="@color/light"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/value_limite_pessoas_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/limite_pessoas_include"
+            android:layout_alignParentStart="true"
+            android:text="20"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/light"
+            android:layout_marginStart="10dp" />
 
-    <TextView
-        android:id="@+id/link_online"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="link da aula"
-        android:gravity="center"
-        android:textSize="22sp"
-        android:textColor="@color/dark"
-        android:textStyle="bold"
-        android:layout_below="@id/text_view_limit_person"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"/>
+        <TextView
+            android:id="@+id/hour_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_aula_include"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Hora:"
+            android:drawableStart="@drawable/ic_baseline_access_time_24"
+            android:drawableTint="@color/light"
+            android:drawablePadding="10dp"
+            android:textColor="@color/light"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/value_hour_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hour_include"
+            android:layout_alignParentEnd="true"
+            android:text="13:00 Hrs"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/light"
+            android:layout_marginEnd="10dp" />
+
+        <TextView
+            android:id="@+id/duracao_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/value_hour_include"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Duração: "
+            android:drawableStart="@drawable/ic_baseline_calendar_today_24"
+            android:drawableTint="@color/light"
+            android:drawablePadding="10dp"
+            android:textColor="@color/light"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/value_duracao_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/duracao_include"
+            android:layout_alignParentEnd="true"
+            android:text="30min"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/light"
+            android:layout_marginEnd="10dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

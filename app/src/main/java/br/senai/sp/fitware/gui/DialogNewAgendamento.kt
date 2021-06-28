@@ -55,9 +55,9 @@ class DialogNewAgendamento : DialogFragment() {
             this.dismiss()
         }
 
-        textDateResult = view.findViewById(R.id.value_data_agendamento)
-        textHourResult = view.findViewById(R.id.value_hour_agendamento)
-        textLimitPersonResult = view.findViewById(R.id.value_limite_pessoas_agendamento)
+        textDateResult = view.findViewById(R.id.value_data_include)
+        textHourResult = view.findViewById(R.id.value_hour_include)
+        textLimitPersonResult = view.findViewById(R.id.value_limite_pessoas_include)
         textPersonalNameResult = view.findViewById(R.id.value_personal_agendamento)
 //        textLinkResult = view.findViewById(R.id.value_link_agendamento)
 

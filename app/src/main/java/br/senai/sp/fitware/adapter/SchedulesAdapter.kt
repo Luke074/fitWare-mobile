@@ -24,7 +24,7 @@ class SchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter<Sch
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.card_aulas, parent, false)
+            .inflate(R.layout.holder_card_aulas, parent, false)
 
         return Holder(view)
     }

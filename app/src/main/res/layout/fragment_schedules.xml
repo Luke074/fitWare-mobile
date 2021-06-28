@@ -30,6 +30,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="10dp"
-        tools:listitem="@layout/card_aulas" />
+        tools:listitem="@layout/holder_card_aulas" />
 
 </RelativeLayout>

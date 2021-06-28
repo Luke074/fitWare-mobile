@@ -6,7 +6,7 @@ import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import br.senai.sp.fitware.R
-import br.senai.sp.fitware.fragments.AulasFragment
+import br.senai.sp.fitware.fragments.ListSchedulesFragment
 import br.senai.sp.fitware.fragments.HomeFragment
 import br.senai.sp.fitware.fragments.ProfileFragment
 import br.senai.sp.fitware.fragments.SchedulesFragment
@@ -18,7 +18,7 @@ class HomeActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
     private lateinit var homeFragment: HomeFragment
     private lateinit var profileFragment: ProfileFragment
     private lateinit var schedulesFragment: SchedulesFragment
-    private lateinit var aulaOnlineFragment: AulasFragment
+    private lateinit var aulaOnlineFragment: ListSchedulesFragment
 
     private lateinit var bottomNavigation: BottomNavigationView
 
@@ -31,7 +31,7 @@ class HomeActivity : AppCompatActivity(), OnNavigationItemSelectedListener {
         homeFragment = HomeFragment()
         profileFragment = ProfileFragment()
         schedulesFragment = SchedulesFragment()
-        aulaOnlineFragment = AulasFragment()
+        aulaOnlineFragment = ListSchedulesFragment()
 
         bottomNavigation = findViewById(R.id.bottom_navigation_bottom)
         bottomNavigation.setOnNavigationItemSelectedListener(this)

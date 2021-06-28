@@ -14,7 +14,7 @@ import br.senai.sp.fitware.api.RetrofitApi
 import br.senai.sp.fitware.api.SessionStudent
 import br.senai.sp.fitware.api.rotas.AulasDisponiveisCall
 import br.senai.sp.fitware.model.Schedules
-import kotlinx.android.synthetic.main.fragment_agendamento.*
+import kotlinx.android.synthetic.main.fragment_schedules.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -38,7 +38,7 @@ class SchedulesFragment : Fragment() {
 //        schedulesList = SchedulesDataSource.getSchedules(view.context)
 //        schedulesAdapter.updateSchedules(schedulesList)
 
-        return inflater.inflate(R.layout.fragment_agendamento, container, false)
+        return inflater.inflate(R.layout.fragment_schedules, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
