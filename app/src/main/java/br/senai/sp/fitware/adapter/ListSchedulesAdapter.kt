@@ -14,7 +14,7 @@ import br.senai.sp.fitware.model.StudentSchedules
 class ListSchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter<ListSchedulesAdapter.Holder>() {
     var listSchedules = listOf<StudentSchedules>()
 
-    fun updateAulaOnline(list: List<StudentSchedules>){
+    fun updateSchedules(list: List<StudentSchedules>){
         listSchedules = list
         notifyDataSetChanged()
     }
