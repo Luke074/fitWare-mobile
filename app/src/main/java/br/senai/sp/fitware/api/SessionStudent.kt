@@ -3,12 +3,12 @@ package br.senai.sp.fitware.api
 import android.content.Context
 import android.content.SharedPreferences
 import br.senai.sp.fitware.R
-import br.senai.sp.fitware.model.Token
 
 class SessionStudent(context: Context?) {
 
     companion object{
         const val TOKEN_STUDENT = "TOKEN"
+        const val ID_STUDENT = "ID"
     }
 
     val prefs: SharedPreferences =

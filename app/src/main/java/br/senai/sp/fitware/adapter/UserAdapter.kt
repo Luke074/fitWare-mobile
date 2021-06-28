@@ -18,7 +18,7 @@ class UserAdapter(val context: FragmentActivity?): RecyclerView.Adapter<UserView
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.holder_user_layout, parent, false)
+            .inflate(R.layout.holder_card_aulas, parent, false)
 
         return UserViewHolder(view)
     }
@@ -28,7 +28,7 @@ class UserAdapter(val context: FragmentActivity?): RecyclerView.Adapter<UserView
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-        holder.bind(userList[position])
+//        holder.bind(userList[position])
     }
 
 }

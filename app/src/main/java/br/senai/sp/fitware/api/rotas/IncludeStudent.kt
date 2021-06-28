@@ -9,5 +9,5 @@ import retrofit2.http.Path
 interface IncludeStudent {
 
     @POST("schedule/{id}/student")
-    fun includeAula(@Path("id") id: Int, @Header("Authorization") token: String?) : Call<List<StudentSchedules>>
+    fun includeAula(@Path("id") id: Long, @Header("Authorization") token: String?) : Call<List<StudentSchedules>>
 }
