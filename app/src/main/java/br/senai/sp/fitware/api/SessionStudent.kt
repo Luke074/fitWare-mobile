@@ -21,6 +21,11 @@ class SessionStudent(context: Context?) {
         editor.putString(TOKEN_STUDENT, token)
         editor.apply()
     }
+    fun saveId(id: Long){
+        val editor: SharedPreferences.Editor = prefs.edit()
+        editor.putLong(ID_STUDENT, id)
+        editor.apply()
+    }
 
     fun returnToken(): String? {
         return prefs.getString(TOKEN_STUDENT, null)

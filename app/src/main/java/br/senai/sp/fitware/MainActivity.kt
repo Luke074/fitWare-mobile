@@ -91,6 +91,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 //                    prefs.edit().putString("ID", token.user.userId.toString()).apply()
 
                     sessionStudent.saveToken(token.token)
+                    sessionStudent.saveId(token.user.userId)
 
                     goHome()
 //

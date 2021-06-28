@@ -58,7 +58,7 @@ class ListSchedulesFragment : Fragment() {
         val prefs = sessionStudent.prefs
 
         val recoveryToken = prefs.getString("TOKEN", "NADA AQUI")
-        val recoveryId = prefs.getInt("ID", 0)
+        val recoveryId = prefs.getLong("ID", 0)
 
 //        Toast.makeText(activity, "Id: ${recoveryId} Token: ${recoveryToken}", Toast.LENGTH_LONG).show()
 
@@ -66,7 +66,7 @@ class ListSchedulesFragment : Fragment() {
         val retrofit = RetrofitApi.getRetrofit()
         val studentSchedules = retrofit.create(IncludeStudent::class.java)
 
-        val call = studentSchedules.includeAula(recoveryId.toLong(), "Bearer ${recoveryToken}")
+        val call = studentSchedules.includeAula(recoveryId, "Bearer ${recoveryToken}")
 
         call.enqueue(object : Callback<List<StudentSchedules>> {
             override fun onResponse(
