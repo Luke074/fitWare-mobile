@@ -59,6 +59,7 @@ class SchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter<Sch
             dialog.updateDate(aulasDisponiveis.date)
             dialog.updateLimitPersonal(aulasDisponiveis.limitPerson)
             dialog.updateNamePersonal(aulasDisponiveis.personalName.name)
+            dialog.updadteId(aulasDisponiveis.id)
 
             dialog.show((context as AppCompatActivity).supportFragmentManager, "Novo Agendamento")
         }

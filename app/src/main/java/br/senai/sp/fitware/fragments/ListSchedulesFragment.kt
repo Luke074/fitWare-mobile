@@ -66,7 +66,7 @@ class ListSchedulesFragment : Fragment() {
         val retrofit = RetrofitApi.getRetrofit()
         val studentSchedules = retrofit.create(IncludeStudent::class.java)
 
-        val call = studentSchedules.includeAula(recoveryId, "Bearer ${recoveryToken}")
+        val call = studentSchedules.listAula(recoveryId, "Bearer ${recoveryToken}")
 
         call.enqueue(object : Callback<List<StudentSchedules>> {
             override fun onResponse(
