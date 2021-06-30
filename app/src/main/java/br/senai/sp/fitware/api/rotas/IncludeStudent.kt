@@ -1,5 +1,6 @@
 package br.senai.sp.fitware.api.rotas
 
+import br.senai.sp.fitware.model.Student
 import br.senai.sp.fitware.model.StudentSchedules
 import retrofit2.Call
 import retrofit2.http.GET
@@ -13,5 +14,5 @@ interface IncludeStudent {
     fun includeAula(@Path("id") id: Long, @Header("Authorization") token: String?) : Call<StudentSchedules>
 
     @GET("student/schedules")
-    fun listAula(@Header("Authorization") token: String?) : Call<List<StudentSchedules>>
+    fun listAula(@Header("Authorization") token: String?) : Call<List<Student>>
 }

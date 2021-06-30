@@ -7,14 +7,15 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import br.senai.sp.fitware.R
+import br.senai.sp.fitware.model.Student
 import br.senai.sp.fitware.model.StudentSchedules
 import com.github.rtoshiro.util.format.SimpleMaskFormatter
 import com.github.rtoshiro.util.format.text.MaskTextWatcher
 
 class ListSchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter<ListSchedulesAdapter.Holder>() {
-    var listSchedules = listOf<StudentSchedules>()
+    var listSchedules = listOf<Student>()
 
-    fun updateSchedules(list: List<StudentSchedules>){
+    fun updateSchedules(list: List<Student>){
         listSchedules = list
         notifyDataSetChanged()
     }
@@ -37,17 +38,17 @@ class ListSchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter
         val maskDate = SimpleMaskFormatter("NNNN/NN/NN")
         val mtwDate = MaskTextWatcher(holder.textDataSchedules, maskDate)
         holder.textDataSchedules.addTextChangedListener(mtwDate)
-        holder.textDataSchedules.text = scheduleInclude.date
+        holder.textDataSchedules.text = scheduleInclude.Schedules.date
 
-        holder.textLimitePersonSchedules.text = scheduleInclude.limit_person.toString()
+        holder.textLimitePersonSchedules.text = scheduleInclude.Schedules.limit_person.toString()
 
         val maskHour = SimpleMaskFormatter("NN:NN")
         val mtwHour = MaskTextWatcher(holder.textHourSchedules, maskHour)
         holder.textHourSchedules.addTextChangedListener(mtwHour)
-        holder.textHourSchedules.text = scheduleInclude.hours
+        holder.textHourSchedules.text = scheduleInclude.Schedules.hours
 
-        holder.textDuracaoSchedules.text = scheduleInclude.duration
-        holder.textLinkSchedules.text = scheduleInclude.link
+        holder.textDuracaoSchedules.text = scheduleInclude.Schedules.duration
+        holder.textLinkSchedules.text = scheduleInclude.Schedules.link
     }
 
     class Holder(view: View) : RecyclerView.ViewHolder(view) {

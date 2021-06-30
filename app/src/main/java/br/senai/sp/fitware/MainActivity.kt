@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var editTextEmail: TextInputEditText
     private lateinit var editTextPassword: TextInputEditText
     private lateinit var buttonEnter: Button
-    private lateinit var token: Token
+    private var token: Token? = null
     lateinit var sessionStudent: SessionStudent
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,11 +78,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 call: Call<Token>,
                 response: Response<Token>
             ) {
-                token = response.body()!!
-
                 if(response.code().toString() == "201" ||
                     response.code().toString() == "200"){
-
+                    token = response.body()!!
 //                    val prefs: SharedPreferences = this@MainActivity.getSharedPreferences(
 //                        "preferencias",
 //                        Context.MODE_PRIVATE
@@ -90,8 +88,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 //                    prefs.edit().putString("TOKEN", token.token).apply()
 //                    prefs.edit().putString("ID", token.user.userId.toString()).apply()
 
-                    sessionStudent.saveToken(token.token)
-                    sessionStudent.saveId(token.user.userId)
+                    sessionStudent.saveToken(token!!.token)
+                    sessionStudent.saveId(token!!.user.userId)
 
                     goHome()
 //

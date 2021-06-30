@@ -12,6 +12,7 @@ import br.senai.sp.fitware.adapter.ListSchedulesAdapter
 import br.senai.sp.fitware.api.RetrofitApi
 import br.senai.sp.fitware.api.SessionStudent
 import br.senai.sp.fitware.api.rotas.IncludeStudent
+import br.senai.sp.fitware.model.Student
 import br.senai.sp.fitware.model.StudentSchedules
 import kotlinx.android.synthetic.main.fragment_include_schedule.*
 import retrofit2.Call
@@ -58,34 +59,29 @@ class ListSchedulesFragment : Fragment() {
         val prefs = sessionStudent.prefs
 
         val recoveryToken = prefs.getString("TOKEN", "NADA AQUI")
-        val recoveryId = prefs.getLong("ID", 0)
 
 //        Toast.makeText(activity, "Id: ${recoveryId} Token: ${recoveryToken}", Toast.LENGTH_LONG).show()
 
-        var schedulesIncludeList:  List<StudentSchedules>
+        var listStudentSchedules:  List<Student>
         val retrofit = RetrofitApi.getRetrofit()
         val studentSchedules = retrofit.create(IncludeStudent::class.java)
 
         val call = studentSchedules.listAula("Bearer ${recoveryToken}")
 
-        call.enqueue(object : Callback<List<StudentSchedules>> {
-            override fun onResponse(
-                call: Call<List<StudentSchedules>>,
-                response: Response<List<StudentSchedules>>
-            ) {
-                if(response.code() == 201 || response.code() == 200){
-                    schedulesIncludeList = response.body()!!
-
-                    scheduleIncludeAdapter.updateSchedules(schedulesIncludeList)
-                }
-                else{
-                    Toast.makeText(activity, "Voce nao se registrou em nenhuma aula", Toast.LENGTH_SHORT).show()
-                }
-            }
-
-            override fun onFailure(call: Call<List<StudentSchedules>>, t: Throwable) {
+        call.enqueue(object : Callback<List<Student>> {
+            override fun onFailure(call: Call<List<Student>>, t: Throwable) {
                 Toast.makeText(activity, "Não foi...", Toast.LENGTH_SHORT).show()
                 Log.e("ERRO_CONEXÃO", t.message.toString())
+            }
+
+            override fun onResponse(call: Call<List<Student>>, response: Response<List<Student>>) {
+                if(response.code() == 201 || response.code() == 200){
+                    listStudentSchedules = response.body()!!
+                    scheduleIncludeAdapter.updateSchedules(listStudentSchedules)
+                }
+                else{
+                    Toast.makeText(activity, "Nenhuma aula disponivel", Toast.LENGTH_SHORT).show()
+                }
             }
         })
     }
