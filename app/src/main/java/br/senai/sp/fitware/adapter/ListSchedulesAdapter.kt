@@ -7,8 +7,6 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import br.senai.sp.fitware.R
-import br.senai.sp.fitware.holder.AulasViewHolder
-import br.senai.sp.fitware.model.Schedules
 import br.senai.sp.fitware.model.StudentSchedules
 import com.github.rtoshiro.util.format.SimpleMaskFormatter
 import com.github.rtoshiro.util.format.text.MaskTextWatcher
@@ -49,6 +47,7 @@ class ListSchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter
         holder.textHourSchedules.text = scheduleInclude.hours
 
         holder.textDuracaoSchedules.text = scheduleInclude.duration
+        holder.textLinkSchedules.text = scheduleInclude.link
     }
 
     class Holder(view: View) : RecyclerView.ViewHolder(view) {
@@ -56,5 +55,6 @@ class ListSchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter
         val textLimitePersonSchedules: TextView = view.findViewById(R.id.limite_pessoas_include)
         val textHourSchedules: TextView = view.findViewById(R.id.value_hour_include)
         val textDuracaoSchedules: TextView = view.findViewById(R.id.value_duracao_include)
+        val textLinkSchedules: TextView = view.findViewById(R.id.link_include)
     }
 }

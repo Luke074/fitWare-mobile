@@ -140,6 +140,24 @@
             android:textColor="@color/light"
             android:layout_marginEnd="10dp" />
 
+        <TextView
+            android:id="@+id/link_include"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/value_duracao_include"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Nenhum link aqui "
+            android:drawableTint="@color/light"
+            android:drawablePadding="10dp"
+            android:textColor="@color/light"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

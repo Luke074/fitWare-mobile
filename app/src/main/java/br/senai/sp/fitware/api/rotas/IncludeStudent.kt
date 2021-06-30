@@ -12,6 +12,6 @@ interface IncludeStudent {
     @POST("schedule/{id}/student")
     fun includeAula(@Path("id") id: Long, @Header("Authorization") token: String?) : Call<StudentSchedules>
 
-    @GET("schedule/{id}/student")
-    fun listAula(@Path("id") id: Long, @Header("Authorization") token: String?) : Call<List<StudentSchedules>>
+    @GET("student/schedules")
+    fun listAula(@Header("Authorization") token: String?) : Call<List<StudentSchedules>>
 }

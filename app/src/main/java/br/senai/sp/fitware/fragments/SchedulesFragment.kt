@@ -62,7 +62,7 @@ class SchedulesFragment : Fragment() {
         val retrofit = RetrofitApi.getRetrofit()
         val aulasCall = retrofit.create(AulasDisponiveisCall::class.java)
 
-        val call = aulasCall.getAulas("Bearer ${recoveryToken}")
+        val call = aulasCall.getAulas("Bearer $recoveryToken")
 
         call.enqueue(object : Callback<List<Schedules>> {
             override fun onFailure(call: Call<List<Schedules>>, t: Throwable) {
