@@ -5,14 +5,17 @@
     android:id="@+id/card_aulas"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="16dp"
-    android:layout_marginStart="16dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="5dp"
     android:layout_marginBottom="8dp"
-    app:cardCornerRadius="8dp">
+    app:cardCornerRadius="8dp"
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="200dp"
+        android:background="@drawable/background_header">
 
         <TextView
             android:id="@+id/tv_tipo_treino_aula"
@@ -21,7 +24,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="20dp"
             android:text="Treino de força"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@android:color/background_light"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +42,7 @@
             android:drawablePadding="8dp"
             android:drawableTint="@color/accentBlack"
             android:text="10/05/2020"
-            android:textColor="@color/dark"
+            android:textColor="@color/light"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +58,7 @@
             android:drawablePadding="8dp"
             android:drawableTint="@color/accentBlack"
             android:text="10/05/2020"
-            android:textColor="@color/dark"
+            android:textColor="@color/light"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/tv_data_aula"
@@ -65,16 +68,15 @@
             android:id="@+id/tv_professor_aula"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
             android:drawableStart="@drawable/ic_baseline_assignment_ind_24"
             android:drawablePadding="8dp"
             android:drawableTint="@color/accentBlack"
             android:text="Personal: Mauro"
-            android:textColor="@color/dark"
+            android:textColor="@color/light"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_data_aula"
             app:layout_constraintTop_toBottomOf="@+id/tv_data_aula" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

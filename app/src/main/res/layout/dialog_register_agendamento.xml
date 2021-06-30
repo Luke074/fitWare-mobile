@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        android:padding="10dp">
 
         <ImageButton
             android:id="@+id/image_button_close"
@@ -17,7 +17,7 @@
             android:layout_height="48dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_margin="4dp"
+
             android:background="@drawable/button_rounded"
             android:padding="5dp"
             android:src="@drawable/close_24" />
