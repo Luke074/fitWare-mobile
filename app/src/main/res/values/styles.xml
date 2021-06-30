@@ -57,5 +57,10 @@
         <item name="android:textSize">20sp</item>
         <item name="android:textStyle">bold</item>
     </style>
+    
+    <style name="rotingBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateTint">@color/light</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
 
 </resources>

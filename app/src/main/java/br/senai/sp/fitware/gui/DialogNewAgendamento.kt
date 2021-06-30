@@ -13,12 +13,14 @@ import androidx.fragment.app.DialogFragment
 import br.senai.sp.fitware.R
 import br.senai.sp.fitware.api.RetrofitApi
 import br.senai.sp.fitware.api.SessionStudent
-import br.senai.sp.fitware.api.rotas.AulasDisponiveisCall
-import br.senai.sp.fitware.api.rotas.IncludeStudent
+import br.senai.sp.fitware.api.rotas.IncludeStudentCall
 import br.senai.sp.fitware.model.StudentSchedules
+import com.github.rtoshiro.util.format.SimpleMaskFormatter
+import com.github.rtoshiro.util.format.text.MaskTextWatcher
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.time.Duration
 
 class DialogNewAgendamento : DialogFragment(), OnClickListener{
 
@@ -27,6 +29,7 @@ class DialogNewAgendamento : DialogFragment(), OnClickListener{
     lateinit var btnFechar: ImageButton
     lateinit var textDateResult: TextView
     lateinit var textHourResult: TextView
+    lateinit var texDurationResult: TextView
     lateinit var textLimitPersonResult: TextView
     lateinit var textLinkResult: TextView
     lateinit var textPersonalNameResult: TextView
@@ -35,6 +38,7 @@ class DialogNewAgendamento : DialogFragment(), OnClickListener{
     private var id: Long = 0
     private var date: String = ""
     private var hour: String = ""
+    private var duration: String = ""
     private var limit_personal: String = ""
 //    private var is_remote: Boolean = false
     private var link: String = ""
@@ -42,6 +46,9 @@ class DialogNewAgendamento : DialogFragment(), OnClickListener{
 
     fun updateDate(date: String) {
         this.date = date
+    }
+    fun updadteDuration(duration: String){
+        this.duration = duration
     }
     fun updadteHour(hour: String) {
         this.hour = hour
@@ -74,12 +81,28 @@ class DialogNewAgendamento : DialogFragment(), OnClickListener{
         }
 
         textDateResult = view.findViewById(R.id.value_data_include)
+        val maskDate = SimpleMaskFormatter("NNNN/NN/NN")
+        val mtwDate = MaskTextWatcher(textDateResult, maskDate)
+        textDateResult.addTextChangedListener(mtwDate)
+        textDateResult.text = date
+
         textHourResult = view.findViewById(R.id.value_hour_include)
+        val maskHour = SimpleMaskFormatter("NN:NN")
+        val mtwHour = MaskTextWatcher(textHourResult, maskHour)
+        textHourResult.addTextChangedListener(mtwHour)
+        textHourResult.text = hour
+
+        texDurationResult = view.findViewById(R.id.value_duracao_include)
+        texDurationResult.text = duration
+
         textLimitPersonResult = view.findViewById(R.id.value_limite_pessoas_include)
+        textLimitPersonResult.text = limit_personal
+
         textPersonalNameResult = view.findViewById(R.id.value_personal_agendamento)
+        textPersonalNameResult.text = personal_name
+
         buttonInclude = view.findViewById(R.id.button_confime)
         buttonInclude.setOnClickListener(this)
-//        textLinkResult = view.findViewById(R.id.value_link_agendamento)
 
         return view
     }
@@ -99,7 +122,7 @@ class DialogNewAgendamento : DialogFragment(), OnClickListener{
         var includeStudent: StudentSchedules
 
         val retrofit = RetrofitApi.getRetrofit()
-        val includeCall = retrofit.create(IncludeStudent::class.java)
+        val includeCall = retrofit.create(IncludeStudentCall::class.java)
 
         val call = includeCall.includeAula(recoveryId, "Bearer ${recoveryToken}")
 

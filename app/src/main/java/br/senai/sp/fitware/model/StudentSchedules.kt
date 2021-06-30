@@ -2,13 +2,7 @@ package br.senai.sp.fitware.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Student(
-    var id: Long,
-    var first_name: String,
-    var Schedules: StudentSchedules
-)
-
-class StudentSchedules(
+data class StudentSchedules(
     var id: Long,
     @SerializedName("date")
     var date: String,

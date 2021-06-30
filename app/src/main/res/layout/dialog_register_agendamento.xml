@@ -196,7 +196,7 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/inputs_redondos"
             android:text="Confirmar Vaga"
-            android:textColor="@color/light" />
+            android:textColor="@color/dark" />
 
 
 

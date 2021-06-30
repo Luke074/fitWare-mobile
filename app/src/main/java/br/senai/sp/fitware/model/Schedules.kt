@@ -1,6 +1,7 @@
 package br.senai.sp.fitware.model
 
 import com.google.gson.annotations.SerializedName
+import java.time.Duration
 import java.util.*
 
 data class Schedules(
@@ -13,6 +14,7 @@ data class Schedules(
     var hour: String,
     @SerializedName("limit_person")
     var limitPerson: String,
+    var duration: String,
     var is_remote: Boolean,
     var link: String
 )
