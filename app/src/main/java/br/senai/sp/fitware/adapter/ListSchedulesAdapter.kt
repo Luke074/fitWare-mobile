@@ -52,7 +52,7 @@ class ListSchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter
 
     class Holder(view: View) : RecyclerView.ViewHolder(view) {
         val textDataSchedules: TextView = view.findViewById(R.id.value_data_include)
-        val textLimitePersonSchedules: TextView = view.findViewById(R.id.limite_pessoas_include)
+        val textLimitePersonSchedules: TextView = view.findViewById(R.id.value_limite_pessoas_include)
         val textHourSchedules: TextView = view.findViewById(R.id.value_hour_include)
         val textDuracaoSchedules: TextView = view.findViewById(R.id.value_duracao_include)
         val textLinkSchedules: TextView = view.findViewById(R.id.link_include)

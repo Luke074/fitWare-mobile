@@ -35,6 +35,7 @@ class SessionStudent(context: Context?) {
         val editor: SharedPreferences.Editor = prefs.edit()
         editor.clear()
         editor.apply()
+
     }
 
 //    prefs.edit().putString("TOKEN", token.token).apply()

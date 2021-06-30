@@ -135,6 +135,9 @@ class DialogNewAgendamento : DialogFragment(), OnClickListener{
                     includeStudent = response.body()!!
                     Toast.makeText(activity, "Voce entrou na Aula", Toast.LENGTH_SHORT).show()
                     dismiss()
+                }else{
+                    Toast.makeText(activity, "Erro na conexão", Toast.LENGTH_SHORT).show()
+                    dismiss()
                 }
             }
 
