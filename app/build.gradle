@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "br.senai.sp.fitware"
         minSdkVersion 21
-        targetSdkVersion 27
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -44,6 +44,9 @@ dependencies {
 
     //Mascara
     implementation 'com.github.rtoshiro.mflibrary:mflibrary:1.0.0'
+
+    //Biblioteca para verificar Token
+    implementation 'com.auth0.android:jwtdecode:2.0.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

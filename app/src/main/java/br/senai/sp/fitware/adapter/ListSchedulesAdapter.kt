@@ -14,8 +14,8 @@ import com.github.rtoshiro.util.format.text.MaskTextWatcher
 class ListSchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter<ListSchedulesAdapter.Holder>() {
     private var listSchedules = emptyList<StudentSchedules>()
 
-    fun updateSchedules(list: StudentSchedules){
-        listSchedules = listOf(list)
+    fun updateSchedules(list: List<StudentSchedules>){
+        listSchedules = list
         notifyDataSetChanged()
     }
 

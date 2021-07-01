@@ -56,19 +56,22 @@ class ListSchedulesFragment : Fragment() {
 
         val recoveryToken = prefs.getString("TOKEN", "NADA AQUI")
 
-        var studentSchedules: StudentSchedules
+        var studentSchedules: List<StudentSchedules>
         val retrofit = RetrofitApi.getRetrofit()
         val studentSchedulesCall = retrofit.create(IncludeStudentCall::class.java)
 
         val call = studentSchedulesCall.listAula("Bearer $recoveryToken")
 
-        call.enqueue(object : Callback<StudentSchedules>{
-            override fun onFailure(call: Call<StudentSchedules>, t: Throwable) {
+        call.enqueue(object : Callback<List<StudentSchedules>>{
+            override fun onFailure(call: Call<List<StudentSchedules>>, t: Throwable) {
                 Toast.makeText(activity, "Não foi...", Toast.LENGTH_SHORT).show()
                 Log.e("ERRO_CONEXÃO", t.message.toString())
             }
 
-            override fun onResponse(call: Call<StudentSchedules>, response: Response<StudentSchedules>) {
+            override fun onResponse(
+                call: Call<List<StudentSchedules>>,
+                response: Response<List<StudentSchedules>>
+            ) {
                 if(response.code() == 201 || response.code() == 200){
                     studentSchedules = response.body()!!
 
