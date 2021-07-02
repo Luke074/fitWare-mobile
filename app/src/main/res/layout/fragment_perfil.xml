@@ -8,9 +8,9 @@
     android:background="@color/secondyLight">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_user_infos"
+        android:id="@+id/rv_user_student"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/holder_card_aulas" />
+        tools:listitem="@layout/" />
 
 </LinearLayout>

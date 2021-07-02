@@ -3,9 +3,11 @@ package br.senai.sp.fitware.api.rotas
 import br.senai.sp.fitware.model.User
 import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Header
+import retrofit2.http.Path
 
 interface UserCall {
 
-    @GET("schedule")
-    fun getUser() : Call<List<User>>
+    @GET("userAcademy/{id}")
+    fun getUser(@Path("id") id: Long, @Header("Authorization") token: String?) : Call<User>
 }
