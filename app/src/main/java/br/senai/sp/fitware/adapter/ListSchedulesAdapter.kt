@@ -45,10 +45,14 @@ class ListSchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter
         val maskHour = SimpleMaskFormatter("NN:NN")
         val mtwHour = MaskTextWatcher(holder.textHourSchedules, maskHour)
         holder.textHourSchedules.addTextChangedListener(mtwHour)
-        holder.textHourSchedules.text = scheduleInclude.Schedules[listArraySchedules.size].hour
+        holder.textHourSchedules.text = scheduleInclude.Schedules[position].hour
 
-        holder.textDuracaoSchedules.text = scheduleInclude.Schedules[listArraySchedules.size].duration
-        holder.textLinkSchedules.text = scheduleInclude.Schedules[listArraySchedules.size].link
+        holder.textDuracaoSchedules.text = scheduleInclude.Schedules[position].duration
+        if(holder.textLinkSchedules.text === ""){
+            holder.textLinkSchedules.text = scheduleInclude.Schedules[position].link
+        }else{
+            holder.textLinkSchedules.text = "Nenhum link nesta aula"
+        }
     }
 
     class Holder(view: View) : RecyclerView.ViewHolder(view) {

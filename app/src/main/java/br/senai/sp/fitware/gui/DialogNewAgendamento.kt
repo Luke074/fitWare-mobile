@@ -79,25 +79,25 @@ class DialogNewAgendamento : DialogFragment(), OnClickListener{
             this.dismiss()
         }
 
-        textDateResult = view.findViewById(R.id.data_include_value)
+        textDateResult = view.findViewById(R.id.data_dialog_value)
         val maskDate = SimpleMaskFormatter("NNNN/NN/NN")
         val mtwDate = MaskTextWatcher(textDateResult, maskDate)
         textDateResult.addTextChangedListener(mtwDate)
         textDateResult.text = date
 
-        textHourResult = view.findViewById(R.id.hours_include_value)
+        textHourResult = view.findViewById(R.id.hour_dialog_value)
         val maskHour = SimpleMaskFormatter("NN:NN")
         val mtwHour = MaskTextWatcher(textHourResult, maskHour)
         textHourResult.addTextChangedListener(mtwHour)
         textHourResult.text = hour
 
-        texDurationResult = view.findViewById(R.id.duracao_include_value)
+        texDurationResult = view.findViewById(R.id.duracao_dialog_value)
         texDurationResult.text = duration
 
-        textLimitPersonResult = view.findViewById(R.id.limite_pessoas_include_value)
+        textLimitPersonResult = view.findViewById(R.id.limite_pessoas_dialog_value)
         textLimitPersonResult.text = limit_personal
 
-        textPersonalNameResult = view.findViewById(R.id.value_personal_agendamento)
+        textPersonalNameResult = view.findViewById(R.id.value_personal_dialog)
         textPersonalNameResult.text = personal_name
 
         buttonInclude = view.findViewById(R.id.button_confime)
