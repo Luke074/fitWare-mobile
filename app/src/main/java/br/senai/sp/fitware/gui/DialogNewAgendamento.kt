@@ -20,7 +20,6 @@ import com.github.rtoshiro.util.format.text.MaskTextWatcher
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.time.Duration
 
 class DialogNewAgendamento : DialogFragment(), OnClickListener{
 
@@ -80,22 +79,22 @@ class DialogNewAgendamento : DialogFragment(), OnClickListener{
             this.dismiss()
         }
 
-        textDateResult = view.findViewById(R.id.value_data_include)
+        textDateResult = view.findViewById(R.id.data_include_value)
         val maskDate = SimpleMaskFormatter("NNNN/NN/NN")
         val mtwDate = MaskTextWatcher(textDateResult, maskDate)
         textDateResult.addTextChangedListener(mtwDate)
         textDateResult.text = date
 
-        textHourResult = view.findViewById(R.id.value_hour_include)
+        textHourResult = view.findViewById(R.id.hours_include_value)
         val maskHour = SimpleMaskFormatter("NN:NN")
         val mtwHour = MaskTextWatcher(textHourResult, maskHour)
         textHourResult.addTextChangedListener(mtwHour)
         textHourResult.text = hour
 
-        texDurationResult = view.findViewById(R.id.value_duracao_include)
+        texDurationResult = view.findViewById(R.id.duracao_include_value)
         texDurationResult.text = duration
 
-        textLimitPersonResult = view.findViewById(R.id.value_limite_pessoas_include)
+        textLimitPersonResult = view.findViewById(R.id.limite_pessoas_include_value)
         textLimitPersonResult.text = limit_personal
 
         textPersonalNameResult = view.findViewById(R.id.value_personal_agendamento)

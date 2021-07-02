@@ -12,7 +12,7 @@ import br.senai.sp.fitware.adapter.ListSchedulesAdapter
 import br.senai.sp.fitware.api.RetrofitApi
 import br.senai.sp.fitware.api.SessionStudent
 import br.senai.sp.fitware.api.rotas.IncludeStudentCall
-import br.senai.sp.fitware.model.StudentSchedules
+import br.senai.sp.fitware.model.ArrayStudent
 import kotlinx.android.synthetic.main.fragment_include_schedule.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -56,22 +56,14 @@ class ListSchedulesFragment : Fragment() {
 
         val recoveryToken = prefs.getString("TOKEN", "NADA AQUI")
 
-        var studentSchedules: List<StudentSchedules>
+        var studentSchedules: ArrayStudent
         val retrofit = RetrofitApi.getRetrofit()
         val studentSchedulesCall = retrofit.create(IncludeStudentCall::class.java)
 
         val call = studentSchedulesCall.listAula("Bearer $recoveryToken")
 
-        call.enqueue(object : Callback<List<StudentSchedules>>{
-            override fun onFailure(call: Call<List<StudentSchedules>>, t: Throwable) {
-                Toast.makeText(activity, "Não foi...", Toast.LENGTH_SHORT).show()
-                Log.e("ERRO_CONEXÃO", t.message.toString())
-            }
-
-            override fun onResponse(
-                call: Call<List<StudentSchedules>>,
-                response: Response<List<StudentSchedules>>
-            ) {
+        call.enqueue(object : Callback<ArrayStudent> {
+            override fun onResponse(call: Call<ArrayStudent>, response: Response<ArrayStudent>) {
                 if(response.code() == 201 || response.code() == 200){
                     studentSchedules = response.body()!!
 
@@ -80,6 +72,11 @@ class ListSchedulesFragment : Fragment() {
                 else{
                     Toast.makeText(activity, "Nenhuma aula disponivel", Toast.LENGTH_SHORT).show()
                 }
+            }
+
+            override fun onFailure(call: Call<ArrayStudent>, t: Throwable) {
+                Toast.makeText(activity, "Não foi...", Toast.LENGTH_SHORT).show()
+                Log.e("ERRO_CONEXÃO", t.message.toString())
             }
         })
     }

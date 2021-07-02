@@ -7,15 +7,16 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import br.senai.sp.fitware.R
-import br.senai.sp.fitware.model.StudentSchedules
+import br.senai.sp.fitware.model.ArrayStudent
 import com.github.rtoshiro.util.format.SimpleMaskFormatter
 import com.github.rtoshiro.util.format.text.MaskTextWatcher
 
 class ListSchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter<ListSchedulesAdapter.Holder>() {
-    private var listSchedules = emptyList<StudentSchedules>()
 
-    fun updateSchedules(list: List<StudentSchedules>){
-        listSchedules = list
+    private var listArraySchedules = emptyList<ArrayStudent>()
+
+    fun updateSchedules(list: ArrayStudent){
+        listArraySchedules = listOf(list)
         notifyDataSetChanged()
     }
 
@@ -28,33 +29,33 @@ class ListSchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter
     }
 
     override fun getItemCount(): Int {
-        return listSchedules.size
+        return listArraySchedules.size
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        val scheduleInclude = listSchedules[position]
+        val scheduleInclude = listArraySchedules[position]
 
         val maskDate = SimpleMaskFormatter("NNNN/NN/NN")
         val mtwDate = MaskTextWatcher(holder.textDataSchedules, maskDate)
         holder.textDataSchedules.addTextChangedListener(mtwDate)
-        holder.textDataSchedules.text = scheduleInclude.date
+        holder.textDataSchedules.text = scheduleInclude.Schedules[listArraySchedules.size].date
 
-        holder.textLimitePersonSchedules.text = scheduleInclude.limit_person.toString()
+        holder.textLimitePersonSchedules.text = scheduleInclude.Schedules[listArraySchedules.size].limit_person.toString()
 
         val maskHour = SimpleMaskFormatter("NN:NN")
         val mtwHour = MaskTextWatcher(holder.textHourSchedules, maskHour)
         holder.textHourSchedules.addTextChangedListener(mtwHour)
-        holder.textHourSchedules.text = scheduleInclude.hours
+        holder.textHourSchedules.text = scheduleInclude.Schedules[listArraySchedules.size].hour
 
-        holder.textDuracaoSchedules.text = scheduleInclude.duration
-        holder.textLinkSchedules.text = scheduleInclude.link
+        holder.textDuracaoSchedules.text = scheduleInclude.Schedules[listArraySchedules.size].duration
+        holder.textLinkSchedules.text = scheduleInclude.Schedules[listArraySchedules.size].link
     }
 
     class Holder(view: View) : RecyclerView.ViewHolder(view) {
-        val textDataSchedules: TextView = view.findViewById(R.id.value_data_include)
-        val textLimitePersonSchedules: TextView = view.findViewById(R.id.value_limite_pessoas_include)
-        val textHourSchedules: TextView = view.findViewById(R.id.value_hour_include)
-        val textDuracaoSchedules: TextView = view.findViewById(R.id.value_duracao_include)
-        val textLinkSchedules: TextView = view.findViewById(R.id.link_include)
+        val textDataSchedules: TextView = view.findViewById(R.id.data_include_value)
+        val textLimitePersonSchedules: TextView = view.findViewById(R.id.limite_pessoas_include_value)
+        val textHourSchedules: TextView = view.findViewById(R.id.hours_include_value)
+        val textDuracaoSchedules: TextView = view.findViewById(R.id.duracao_include_value)
+        val textLinkSchedules: TextView = view.findViewById(R.id.link_include_value)
     }
 }
