@@ -9,5 +9,5 @@ import retrofit2.http.Path
 interface UserCall {
 
     @GET("userAcademy/{id}")
-    fun getUser(@Path("id") id: Long, @Header("Authorization") token: String?) : Call<User>
+    fun getUser(@Path("id") id: Int, @Header("Authorization") token: String?) : Call<User>
 }

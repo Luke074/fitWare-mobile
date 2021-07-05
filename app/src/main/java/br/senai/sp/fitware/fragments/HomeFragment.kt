@@ -60,9 +60,6 @@ class HomeFragment : Fragment() {
             override fun onResponse(call: Call<List<Academy>>, response: Response<List<Academy>>) {
                 if(response.code() == 201 || response.code() == 200){
                     academyList = response.body()!!
-
-                    Log.i("XPTO", academyList.toString())
-
                     academyAdapter.updateAcademy(academyList)
                 }
                 else{

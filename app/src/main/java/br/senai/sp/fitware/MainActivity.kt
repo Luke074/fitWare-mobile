@@ -14,7 +14,6 @@ import br.senai.sp.fitware.api.RetrofitApi
 import br.senai.sp.fitware.api.SessionStudent
 import br.senai.sp.fitware.model.Token
 import br.senai.sp.fitware.model.UserLoginModel
-import br.senai.sp.fitware.model.UserToken
 import com.google.android.material.textfield.TextInputEditText
 import retrofit2.Call
 import retrofit2.Callback
@@ -92,9 +91,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     sessionStudent.saveId(token!!.user.userId)
 
                     goHome()
-//
-//                    Log.i("XPTO", token.token)
-//                    Log.i("XPTO", token.user.userId.toString())
+
+                    Log.i("XPTO", token!!.token)
+                    Log.i("XPTO", token!!.user.userId.toString())
+
                 }else{
                     Toast.makeText(this@MainActivity,
                         "email ou senha incorreto", Toast.LENGTH_LONG)

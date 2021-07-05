@@ -48,7 +48,7 @@
 
     <!-- Home Activity -->
     <string name="welcome">Bem-vindo Ao FitWare</string>
-    <string name="academy">Academias</string>
+    <string name="academy">Academias Parceiras</string>
     <!--  Agendamento Activity  -->
     <string name="days">Aulas Disponiveis:</string>
     <string name="agende">Agende seu dia</string>

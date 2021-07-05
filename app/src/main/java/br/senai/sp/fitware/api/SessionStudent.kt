@@ -8,7 +8,7 @@ class SessionStudent(context: Context?) {
 
     companion object{
         const val TOKEN_STUDENT = "TOKEN"
-        const val ID_STUDENT = "ID"
+        const val ID_STUDENT = "id"
     }
 
     val prefs: SharedPreferences =
@@ -21,6 +21,7 @@ class SessionStudent(context: Context?) {
         editor.putString(TOKEN_STUDENT, token)
         editor.apply()
     }
+
     fun saveId(id: Long){
         val editor: SharedPreferences.Editor = prefs.edit()
         editor.putLong(ID_STUDENT, id)

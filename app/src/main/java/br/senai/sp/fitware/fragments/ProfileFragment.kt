@@ -14,7 +14,7 @@ import br.senai.sp.fitware.api.SessionStudent
 import br.senai.sp.fitware.api.rotas.UserCall
 import br.senai.sp.fitware.model.User
 import kotlinx.android.synthetic.main.fragment_perfil.*
-import okhttp3.Callback
+import retrofit2.Callback
 import retrofit2.Call
 import retrofit2.Response
 
@@ -23,7 +23,6 @@ class ProfileFragment : Fragment() {
     private lateinit var sessionStudent: SessionStudent
     private lateinit var recyclerUser: RecyclerView
     private var userAdapter = UserAdapter(activity)
-//    private var userList = listOf<User>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,31 +35,27 @@ class ProfileFragment : Fragment() {
     ): View? {
         setHasOptionsMenu(true)
 
-//        userList = UserDataSource.getUser(view.context)
-//        userAdapter.updateUser(userList)
-
         return inflater.inflate(R.layout.fragment_perfil, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        recyclerUser = recycler_user_infos
-        userAdapter = UserAdapter(activity)
+        recyclerUser = rv_user_student
         recyclerUser.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-
+        userAdapter = UserAdapter(activity)
         recyclerUser.adapter = userAdapter
 
         setUserProfile()
     }
 
     private fun setUserProfile() {
-
         sessionStudent = SessionStudent(activity)
         val prefs = sessionStudent.prefs
+
         val recoveryToken = prefs.getString("TOKEN", "NADA AQUI")
-        val recoveryId = prefs.getLong("ID", 0)
+        val recoveryId = prefs.getInt("ID", 0)
 
         var userProfile: User
 
@@ -69,15 +64,28 @@ class ProfileFragment : Fragment() {
 
         val call = userCall.getUser(recoveryId, "Bearer $recoveryToken")
 
-        call.enqueue(object : retrofit2.Callback<User> {
-            override fun onResponse(call: Call<User>, response: Response<User>) {
-                userProfile = response.body()!!
+        Log.i("IDTESTE", recoveryId.toString())
+        Log.i("IDTESTE", recoveryToken.toString())
 
-                userAdapter.updateUser(userProfile)
-                Log.i("USERTESTE", userProfile.toString())
+        call.enqueue(object : Callback<User> {
+            override fun onResponse(
+                call: Call<User>,
+                response: Response<User>
+            ) {
+                if(response.code() == 201 || response.code() == 200){
+                    userProfile = response.body()!!
+                    userAdapter.updateUser(userProfile)
+                }
+                else{
+                    Toast.makeText(activity, "Erro", Toast.LENGTH_SHORT).show()
+                }
+
             }
 
-            override fun onFailure(call: Call<User>, t: Throwable) {
+            override fun onFailure(
+                call: Call<User>,
+                t: Throwable
+            ) {
                 Toast.makeText(activity, "Não foi...", Toast.LENGTH_SHORT).show()
                 Log.e("ERRO_CONEXÃO", t.message.toString())
             }

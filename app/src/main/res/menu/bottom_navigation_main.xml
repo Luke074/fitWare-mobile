@@ -10,7 +10,8 @@
     <item android:id="@+id/menu_aulas_online"
         android:title="@string/aula"
         android:icon="@drawable/tv_uncolor"/>
-    <item android:id="@+id/menu_perfil"
-        android:title="@string/perfil"
-        android:icon="@drawable/profile_uncolor"/>
+        android:icon="@drawable/tv_uncolor"/>
+<!--    <item android:id="@+id/menu_perfil"-->
+<!--        android:title="@string/perfil"-->
+<!--        android:icon="@drawable/profile_uncolor"/>-->
 </menu>
