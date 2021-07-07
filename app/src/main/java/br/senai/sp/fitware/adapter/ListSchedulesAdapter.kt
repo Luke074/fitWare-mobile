@@ -38,9 +38,9 @@ class ListSchedulesAdapter(val context: FragmentActivity?): RecyclerView.Adapter
         val maskDate = SimpleMaskFormatter("NNNN/NN/NN")
         val mtwDate = MaskTextWatcher(holder.textDataSchedules, maskDate)
         holder.textDataSchedules.addTextChangedListener(mtwDate)
-        holder.textDataSchedules.text = scheduleInclude.Schedules[listArraySchedules.size].date
+        holder.textDataSchedules.text = scheduleInclude.Schedules[position].date
 
-        holder.textLimitePersonSchedules.text = scheduleInclude.Schedules[listArraySchedules.size].limit_person.toString()
+        holder.textLimitePersonSchedules.text = scheduleInclude.Schedules[position].limit_person.toString()
 
         val maskHour = SimpleMaskFormatter("NN:NN")
         val mtwHour = MaskTextWatcher(holder.textHourSchedules, maskHour)

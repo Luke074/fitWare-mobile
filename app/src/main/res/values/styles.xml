@@ -54,8 +54,10 @@
     <style name="detailsCard" parent="Theme.AppCompat.Light.Dialog">
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/dark</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">7dp</item>
     </style>
     
     <style name="rotingBar" parent="Widget.AppCompat.ProgressBar">
