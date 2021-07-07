@@ -14,20 +14,6 @@
         android:background="@drawable/background_card_include">
 
         <TextView
-            android:id="@+id/tv_aula_include"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:text="Titulo da Aula"
-            android:textColor="@color/light"
-            android:gravity="center"
-            android:textSize="30sp"
-            android:textStyle="bold"/>
-
-        <TextView
             android:id="@+id/data_include"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
